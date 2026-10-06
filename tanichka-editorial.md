@@ -166,11 +166,3 @@ A blur that melts upward from the bottom of one photo, as if it dissolves into t
   -webkit-mask-image: linear-gradient(to top, #000 35%, transparent); mask-image: linear-gradient(to top, #000 35%, transparent);
 }
 ```
-
-## 5. Never
-
-- Cards, frames, polaroids, tape, borders, boxes, rounded panels or bands behind text.
-- Moving, shrinking or cropping a photo or video to make room for text. If text doesn't fit, make it smaller, use fewer words, move it, or leave it out.
-- The voice-message pill with the waveform, header and footer rows, bracket tags, icons, photo grids, slide templates.
-- Hearts, emoji, filled or 3D icons, heavy 3D renders.
-- Pink text or pink fills.
