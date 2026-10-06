@@ -1,6 +1,6 @@
 # Reel Stylebook: @tanii444.ka
 
-Version 0.9 (2026-10-06: audit fixes. Her footage is never moved or covered to make room for text, and no band, panel or box ever goes behind text (section 3.3); hook title optional and sized to the shot; split screen only for real screen recordings; one-go edit, no colour matching, no ElevenLabs; pacing counts softened; soft text glow on accent text. The design system is now colours, type and four signature elements (frosted glass pill, glow, blur dissolve, handle tag); the carousel kit, voice pill, end card, icons, face card and card shadows are gone, and screenshots are shown plain). Version 0.8 (2026-10-06: no fixed text positions on footage; text goes where each shot has room, section 3.3). Version 0.7 (2026-10-06: the accent line is left-aligned flush under the display as one title block, never centred or placed like a caption). Version 0.6 (2026-10-06: the design system gained a dark Ink theme; paper layouts can use it, one theme per reel). Version 0.5 (2026-10-06: synced with the current Tanichka Editorial design system: no polaroids, frames or tape (screenshots are plain photo cards), no heart icon, no tilted text). Version 0.4 (2026-10-05: text sizes +20%, no automatic caption pills, no colour grade, after Tetiana's review of IMG_6777). Built from the **Tanichka Editorial** design system, Tetiana's video editing rules, and a frame-by-frame study of her reference reel.
+Version 0.9 (2026-10-06: audit fixes. Her footage is never moved or covered to make room for text, and no band, panel or box ever goes behind text (section 3.3); hook title optional and sized to the shot; split screen only for real screen recordings; one-go edit, no colour matching, no ElevenLabs; pacing counts softened; soft text glow on accent text; Reels + TikTok safe zones written as code margins in section 3.1. The design system is now colours, type and four signature elements (frosted glass pill, glow, blur dissolve, handle tag); the carousel kit, voice pill, end card, icons, face card and card shadows are gone, and screenshots are shown plain). Version 0.8 (2026-10-06: no fixed text positions on footage; text goes where each shot has room, section 3.3). Version 0.7 (2026-10-06: the accent line is left-aligned flush under the display as one title block, never centred or placed like a caption). Version 0.6 (2026-10-06: the design system gained a dark Ink theme; paper layouts can use it, one theme per reel). Version 0.5 (2026-10-06: synced with the current Tanichka Editorial design system: no polaroids, frames or tape (screenshots are plain photo cards), no heart icon, no tilted text). Version 0.4 (2026-10-05: text sizes +20%, no automatic caption pills, no colour grade, after Tetiana's review of IMG_6777). Built from the **Tanichka Editorial** design system, Tetiana's video editing rules, and a frame-by-frame study of her reference reel.
 
 **Where this file lives:** written inside the Tanichka Editorial design system (Export group, `assets/Export/reel-stylebook.md`) and published to the GitHub repo `tanichk4/personal-brand-system`. Change it in the design system first, then export, or the next export overwrites the change. Whenever the design system changes, this file is updated in the same change so the two never disagree.
 
@@ -29,6 +29,7 @@ Version 0.9 (2026-10-06: audit fixes. Her footage is never moved or covered to m
 
 | Item | Value |
 | --- | --- |
+| Safe zones | Margins top 250 · bottom 480 · left 68 · right 68 (160 from y 900 down): the stricter of Reels and TikTok. Every overlay stays inside (section 3.1) |
 | Canvas | 1080×1920, 30 fps, H.264 High, yuv420p, Rec.709 SDR, 16–20 Mbps, AAC 48 kHz 320 kbps |
 | Fonts | Onest (400 / 500 / 700) and Playfair Display Italic 400. Nothing else, no fallbacks to Inter, Roboto or Arial |
 | Captions | Onest 500, **58px**, lowercase, centred, **phrase chunks of 2–4 words, max 24 characters, 1 line** |
@@ -156,14 +157,38 @@ Not allowed: any other colour, coloured backgrounds, pink text, mint, neon, any 
 
 ### 3.1 Canvas and safe zones
 
-| Item | Value | Why |
-| --- | --- | --- |
-| Canvas | 1080×1920, 30 fps (convert 24/60 fps footage to 30) | Reels/TikTok/Stories native |
-| Top unsafe band | 0–250px: no text | Platform header, Stories progress bar |
-| Bottom unsafe band | 1440–1920px (bottom 480px): no text | Reels/TikTok caption, username, audio row |
-| Right unsafe band | x 920–1080 from y 900 down: no text | Like/comment/share buttons |
-| Side margin | 68px | `margin-side` |
-| LinkedIn / profile grid crop | Keep hook title and key text inside y 285–1635 (centre 1080×1350) | LinkedIn and the Instagram grid may crop to 4:5 / 3:4 ⚑ ASSUMPTION |
+One safe zone for every vertical video, built from the stricter edge of Instagram Reels and TikTok (Stories fits inside it too). The apps cover these edges with their own buttons, captions and tabs, so text, titles, pills and key graphics stay inside the safe area. Her footage itself still fills the whole frame; only overlays keep to the margins.
+
+| Edge | Margin on 1080×1920 | What covers it | Reels / TikTok on their own (approx.) |
+| --- | --- | --- | --- |
+| Top | 250px | App header, tabs ("Reels", "Following / For You"), search, Stories progress bar | Reels ~220px · TikTok ~200px |
+| Bottom | 480px | Username, caption, audio row, nav bar | Reels ~420px · TikTok ~480px |
+| Right | 160px from y 900 down (68px above it) | Like, comment, share, save, profile buttons | Reels ~140px · TikTok ~160px |
+| Left | 68px (`margin-side`) | Edge of the phone | Reels ~60px · TikTok ~60px |
+
+- **Safe area:** x 68–1012 above y 900; x 68–920 from y 900 down; y 250–1440. When one simple rectangle is easier, use x 68–920, y 250–1440 (852×1190).
+- Apps change their layouts now and then, so these margins keep a little extra room on purpose. Check new UI against them about once a year.
+- LinkedIn and the profile grid may crop to 4:5: keep the hook title and key text inside y 285–1635 when possible ⚑ ASSUMPTION.
+- Canvas: 1080×1920, 30 fps (convert 24/60 fps footage to 30).
+
+For code (Remotion or any renderer), use these as the margins of every overlay layer:
+
+```ts
+// reel-safe-zones: stricter of Instagram Reels and TikTok, 1080×1920
+export const CANVAS = {width: 1080, height: 1920};
+export const SAFE = {
+  top: 250,
+  bottom: 480,          // safe area ends at y 1440
+  left: 68,
+  right: 68,            // above y 900
+  rightLower: 160,      // from y 900 down (like/comment/share buttons)
+  rightLowerFromY: 900,
+};
+// One-rectangle version: x 68–920, y 250–1440
+export const SAFE_BOX = {x: 68, y: 250, width: 852, height: 1190};
+```
+
+In Remotion, wrap every text and graphic layer in an `AbsoluteFill` with `padding: '250px 160px 480px 68px'` (or the two-step right margin above), and render a QA preview with a semi-transparent overlay of these bands (section 16).
 
 ### 3.2 Layouts
 
@@ -199,7 +224,7 @@ There are no fixed positions for text or graphics on footage. For each shot, tex
 | Alignment | The display title block always has its left edge at the 68px side margin (never centred); only its height changes. Other elements are centred in their area | Design system: display left-aligned |
 | Contrast | After choosing, the colour rule in section 1.2 must reach ≥ 4.5:1; if it can't, use the next calmest area | |
 | No room | If no area fits, in this order: 1) make it smaller (display down to 72px, caption down to 48px), 2) fewer words, or drop the accent line, 3) another calm area, lower part included, 4) leave it out (pill, handle tag, even the title; captions alone are fine). Never add a band or box, never move her, never fall back to her face or hands | The white-band edit on IMG_6777 came from forcing a title in |
-| Safe zones | Always: no text in the top 250px, the bottom 480px, or right of x 920 from y 900 down (section 3.1) | The app's own buttons and captions cover those |
+| Safe zones | Always inside the safe area of section 3.1: no text in the top 250px, the bottom 480px, or right of x 920 from y 900 down. In code, use the `SAFE` margins | The apps' own buttons and captions cover those |
 | Paper layouts | Split screen (L3's paper half) keeps its grid; there is no footage to avoid there | |
 
 ---
@@ -624,7 +649,7 @@ Work in `Claude/videos/<video>/`. **One go by default:** run every round below w
 ### Round 3: first 15 s
 
 - [ ] HDR → SDR conversion (no grade), hook title, captions, cut-zooms, layouts, sound for 0–15 s only (Remotion).
-- [ ] Check safe zones with an overlay of the Reels/TikTok UI.
+- [ ] Check safe zones with an overlay of the section 3.1 margins (or the Reels/TikTok UI) on the render.
 - [ ] Self-check the first 15 s (hook, safe zones, captions) and fix before going on. Deliver `preview_15s.mp4` only if she asked for a stop here.
 
 ### Round 4: full edit
@@ -654,6 +679,7 @@ Work in `Claude/videos/<video>/`. **One go by default:** run every round below w
 | 2026-10-06 | Accent line is left-aligned flush under the display as one title block (same x 68), never centred or placed like a caption |
 | 2026-10-06 | No fixed text positions on footage; text goes where the shot has room |
 | 2026-10-06 | This file now lives in the design system's Export group and is updated in the same change as the system |
+| 2026-10-06 | Safe zones: one combined zone from the stricter edge of Reels and TikTok, written as pixel margins and a code snippet so generated overlays use them (section 3.1) |
 | 2026-10-06 | Soft text glow added (light bloom + faint pink halation) on accent text only: titles, accent line, caption keyword, pill text, beat word, CTA keyword. Removed the old rules "no shadow on captions" and "no glow behind text" (Tetiana didn't set them) |
 | 2026-10-06 | Design system cut to colours, type and four signature elements Tetiana keeps as her branding: frosted glass pill, glow, blur dissolve, handle tag. Removed: the carousel kit (header and footer rows, bracket tags, icons, photo grid, slide templates), the voice-message pill with its waveform, the end card, the face card (L4) and card shadows; screenshots are shown plain |
 | 2026-10-06 | Audit fixes (v0.9): Hard rules added at the top; her footage is never moved or covered and no band, panel or box goes behind text; hook title optional, display 72–118px on footage; L3 only for real screen recordings and never a fallback; framing as shot; one-go edit; no white-balance matching; no ElevenLabs; visual-change and trigger counts became guidance; her own decisions come first in precedence |
