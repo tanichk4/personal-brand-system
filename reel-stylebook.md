@@ -1,6 +1,6 @@
 # Reel Stylebook: @tanii444.ka
 
-Version 0.9 (2026-10-06: audit fixes. Her footage is never moved or covered to make room for text, and no band, panel or box ever goes behind text (section 3.3); hook title optional and sized to the shot; split screen only for real screen recordings; one-go edit, no colour matching, no ElevenLabs; pacing counts softened; soft text glow on accent text; Reels + TikTok safe zones written as code margins in section 3.1. The design system is now colours, type and four signature elements (frosted glass pill, glow, blur dissolve, handle tag); the carousel kit, voice pill, end card, icons, face card and card shadows are gone, and screenshots are shown plain). Version 0.8 (2026-10-06: no fixed text positions on footage; text goes where each shot has room, section 3.3). Version 0.7 (2026-10-06: the accent line is left-aligned flush under the display as one title block, never centred or placed like a caption). Version 0.6 (2026-10-06: the design system gained a dark Ink theme; paper layouts can use it, one theme per reel). Version 0.5 (2026-10-06: synced with the current Tanichka Editorial design system: no polaroids, frames or tape (screenshots are plain photo cards), no heart icon, no tilted text). Version 0.4 (2026-10-05: text sizes +20%, no automatic caption pills, no colour grade, after Tetiana's review of IMG_6777). Built from the **Tanichka Editorial** design system, Tetiana's video editing rules, and a frame-by-frame study of her reference reel.
+Version 1.0 (2026-10-06). What changed and why: see the Decisions log at the end. Built from the **Tanichka Editorial** design system, Tetiana's video editing rules, and a frame-by-frame study of her reference reel.
 
 **Where this file lives:** written inside the Tanichka Editorial design system (Export group, `assets/Export/reel-stylebook.md`) and published to the GitHub repo `tanichk4/personal-brand-system`. Change it in the design system first, then export, or the next export overwrites the change. Whenever the design system changes, this file is updated in the same change so the two never disagree.
 
@@ -8,20 +8,21 @@ Version 0.9 (2026-10-06: audit fixes. Her footage is never moved or covered to m
 
 **Precedence when rules conflict:** 1) Tetiana's own decisions (what she says in the chat or in her CLAUDE.md), 2) Tanichka Editorial design system, 3) this file, 4) the reference reel. The older test edit's style (Manrope, Cormorant, mint #9BE7B0) is retired. Never use it.
 
-**Markers:** `⚑ ASSUMPTION` means a reasonable default that Tetiana hasn't confirmed yet. `+ NEW` means a video-only element the design system doesn't define. The design system holds colours, type and the four signature elements; video-only elements (status pill, screenshots, layouts) are defined here.
+**Markers:** `⚑ ASSUMPTION` means a reasonable default that Tetiana hasn't confirmed yet. ★ in the quick reference marks a hard rule. The design system holds colours, type and the five signature elements (frosted glass pill, glow, text glow, blur dissolve, handle tag) plus the caption haze; video-only elements (status pill, screenshots, layouts) are defined here.
 
 **Rules and defaults.** The short list under "Hard rules" below is always true. Everything else in this file is a good default: bend it when a shot needs it, and say what you bent in the edit notes. Numbers are starting points, not quotas; never add something to the screen only to hit a count.
 
 ### Hard rules (always true)
 
-1. **Her footage is never moved, shrunk, cropped or covered to make room for text or graphics.** Her framing stays as she shot it; zooms are centred on her face.
-2. **Never add a band, bar, strip, panel, paper area, scrim or box behind or around text on footage.** Text sits straight on the picture, or it isn't shown. (The soft text glow and the pink glow are not bands: they are allowed, section 2.)
+1. **Her footage is never moved, shrunk, cropped or covered to make room for text or graphics.** Her framing stays as she shot it; zooms are centred on her face. The one exception: the paper split (L3), only for a real screen recording.
+2. **Never add a band, bar, strip, panel, paper area, scrim or box behind or around text on footage.** Text sits straight on the picture, or it isn't shown. (The soft text glow, the caption haze and the pink glow are not bands: they are allowed, sections 1.6 and 2.)
 3. If text doesn't fit, in this order: make it smaller (down to the minimum sizes in section 1.1), use fewer words or drop the accent line, put it in another calm area (the lower part of the frame included), or leave it out. Captions alone are a finished reel; a title can live on the cover instead.
 4. Never on her face or hands. Never in the platform safe zones (section 3.1).
-5. Onest and Playfair Display Italic only. Only the colours in section 2. Nothing tilted. No polaroids, frames, tape, hearts, emoji.
-6. No colour grade and no colour matching; only the HDR → SDR conversion (section 12).
+5. Onest and Playfair Display Italic only. Only the colours in section 2. Nothing tilted. Nothing from the Never list (section 14).
+6. No colour grade and no colour matching; only the HDR → SDR conversion (section 12). The one exception: the black-and-white beat moment (L5), max 1 per reel.
 7. No music in the file. Sound effects only from the approved kit (section 7).
 8. One-go edit: deliver the finished reel without stopping between rounds, unless Tetiana asks for a stop (section 16).
+9. **One caption colour for the whole reel.** It never changes between shots, not even for one shot. Bright shots get the soft caption haze instead (section 1.6).
 
 ---
 
@@ -29,28 +30,29 @@ Version 0.9 (2026-10-06: audit fixes. Her footage is never moved or covered to m
 
 | Item | Value |
 | --- | --- |
-| Safe zones | Margins top 250 · bottom 480 · left 68 · right 68 (160 from y 900 down): the stricter of Reels and TikTok. Every overlay stays inside (section 3.1) |
+| ★ Safe zones | Margins top 250 · bottom 480 · left 68 · right 68 (160 from y 900 down): the stricter of Reels and TikTok. Every overlay stays inside (section 3.1) |
 | Canvas | 1080×1920, 30 fps, H.264 High, yuv420p, Rec.709 SDR, 16–20 Mbps, AAC 48 kHz 320 kbps |
-| Fonts | Onest (400 / 500 / 700) and Playfair Display Italic 400. Nothing else, no fallbacks to Inter, Roboto or Arial |
+| ★ Fonts | Onest (400 / 500 / 700) and Playfair Display Italic 400. Nothing else, no fallbacks to Inter, Roboto or Arial |
 | Captions | Onest 500, **58px**, lowercase, centred, **phrase chunks of 2–4 words, max 24 characters, 1 line** |
-| Caption colour | Picked per shot to suit the picture: white #FFFFFF, porcelain #F6F5F1 or ink #111111 (section 1.2) |
-| Caption timing | Min 800 ms on screen, target 1000–1600 ms, max 2400 ms. Soft Focus entrance (140 ms) |
+| ★ Caption colour | **One colour for the whole reel**, white #FFFFFF by default (porcelain #F6F5F1 or ink #111111 only if they suit every shot). Never changes mid-reel. Bright shots get the soft caption haze (section 1.6) |
+| Caption timing | Min 800 ms on screen, target 1000–1600 ms, max 2400 ms. Soft Focus entrance (140 ms). With no hook title, captions start on frame 0 (section 1.7) |
 | Text placement | **No fixed positions on footage.** Each shot, text and graphics go where the picture has room: the calmest empty area, never on her face or hands, never on busy detail (section 3.3). Platform safe zones always apply. The split layout keeps its grid |
 | Caption position | Placed per shot by section 3.3. Max width 760px. Fixed for the whole shot, moves only on a cut |
 | Keyword | Playfair Display Italic 400 at 115% (67px), same colour as the caption. Max 1 per chunk, 1 per 6 s |
-| Hook title | **Optional**, only when the shot has room. Onest 700, 72–118px on footage (sized to the room, 118px on paper), lh 0.98, ls -0.045em, left-aligned at the 68px side margin, never centred; height chosen per shot (section 3.3). Accent line Playfair Italic 80px, flush left 14px under the display, straight (never rotated) |
-| Colours | paper #F6F5F1 · ink #111111 · muted #6E6A64 · white #FFFFFF (text on footage and glass) · accent-pink #F2A7C3 (pill dots and the glow only) |
+| Hook title | **Optional**, only when the shot has room. Onest 700, 72–118px on footage (sized to the room, 118px on paper), lh 0.98, ls -0.045em, left-aligned at the 68px side margin, never centred; height chosen per shot (section 3.3). Accent line Playfair Italic at 68% of the display (80px under a 118px display, 49px under 72px), flush left 14px under it, straight (never rotated) |
+| ★ Colours | paper #F6F5F1 · ink #111111 · muted #6E6A64 · white #FFFFFF (text on footage and glass) · accent-pink #F2A7C3 (pill dots and the glow only) |
 | Zoom | Cut-zoom steps 100% ↔ 110%. Max 2 steps per 10 s, min 3.0 s apart. Slow push 100→103% inside a shot |
 | Transitions | Hard cut inside a thought. Blur dissolve 240 ms for a new section. Blur dissolve 320 ms for a layout change |
 | Easing | Entrances `cubic-bezier(0.22, 1, 0.36, 1)`, exits `cubic-bezier(0.4, 0, 1, 1)`. No springs that overshoot, no bounce |
-| Restraint | Max 1 glass element (pill or blur) and 1 glow on screen at once. Max 2 graphics plus the caption at once |
+| Restraint | Max 1 glass element (frosted pill or blur dissolve) and 1 glow on screen at once. Max 2 graphics plus the caption at once |
 | Status pill | Frosted pill with a pulsing pink dot and animated dots ("Claude думає…") while something is in progress, then a soft Pop In of the result (section 6.5) |
 | Pauses | Trim any pause over 400 ms down to 200 ms. Keep the last good take |
 | Visual change | About every 4–6 s, mostly from cut-zooms; a strong still shot can hold longer. Never add a graphic just to change something |
-| Sound | **No music.** One fixed kit of soft SFX from `@remotion/sfx` + ffmpeg (pop, whoosh, click, switch, ding), max 1 per 3 s. No ElevenLabs (paid). Voice -14 LUFS integrated, -1 dBTP |
+| ★ Sound | **No music.** One fixed kit of soft SFX from `@remotion/sfx` + ffmpeg (pop, whoosh, click, switch, ding), max 1 per 3 s. No ElevenLabs (paid). Voice -14 LUFS integrated, -1 dBTP |
 | Interest triggers | Use the ones that fit the content: open loop, status-pill anticipation, re-hook, payoff pop-up, loop ending (section 8.1) |
-| Look | **No grade.** Keep the colour she shot; only the HDR → SDR conversion (section 12) |
+| ★ Look | **No grade.** Keep the colour she shot; only the HDR → SDR conversion (section 12) |
 | Ending | Comment-keyword CTA over footage in the last 3–4 s, then cut 300 ms after the last word so it loops |
+| Cover | 1080×1920, title and face inside the middle 1080×1440 that the profile grid shows (section 11.2) |
 
 ---
 
@@ -64,11 +66,11 @@ Nothing is ever rotated or tilted: no tilted titles, accent lines, keywords or c
 
 | Role | Font | Size | Weight | Line height | Letter spacing | Colour | Why |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| `reel-caption` + NEW | Onest | 58px (down to 48px only when a shot has no room) | 500 | 1.2 | -0.01em | #FFFFFF / #F6F5F1 / #111111 (section 1.2) | Tetiana found 48px too small (2026-10-05) and asked for +20%; 500 is the heaviest weight the system allows outside the display |
+| `reel-caption` | Onest | 58px (down to 48px only when a shot has no room) | 500 | 1.2 | -0.01em | One per reel: #FFFFFF, #F6F5F1 or #111111 (section 1.2) | Tetiana found 48px too small (2026-10-05) and asked for +20%; 500 is the heaviest weight the system allows outside the display |
 | `reel-caption-keyword` | Playfair Display Italic | 67px (115%) | 400 | 1 | 0 | same as its caption | The system's `highlight` rule, applied to captions |
 | `display` (hook title, section title) | Onest | 118px on paper; 72–118px on footage, the largest that fits the shot's calm area | 700 | 0.98 | -0.045em | #FFFFFF on footage, #111111 on paper | The system's display; the only bold |
-| `accent-line` | Playfair Display Italic | 80px | 400 | 1.1 | 0 | same as display | The title's last line: straight, left-aligned at x 68 under the display |
-| `beat-word` + NEW | Playfair Display Italic | 160px | 400 | 1 | 0 | #FFFFFF | One-word punchline moment (L5, section 3.2). Built on the accent line, scaled up |
+| `accent-line` | Playfair Display Italic | 68% of the display (80px under 118px, 49px under 72px) | 400 | 1.1 | 0 | same as display | The title's last line: straight, left-aligned at x 68 under the display. Scales with the display so it is never bigger than the title |
+| `beat-word` | Playfair Display Italic | 160px | 400 | 1 | 0 | #FFFFFF | One-word punchline moment (L5, section 3.2). Built on the accent line, scaled up |
 | `section-label` | Onest | 48px | 400 | 1 | -0.01em | #FFFFFF on footage, #111111 on paper | Names the content below it |
 | `meta` | Onest | 36px | 400 | 1 | 0 | #FFFFFF on footage, #111111 / #6E6A64 on paper | Handle, step index, small CTA lead-in |
 | `pill` | Onest | 31px | 500 | 1 | -0.01em | #FFFFFF | Text inside a frosted pill or the status pill (+20% on the design system's 26px) |
@@ -93,10 +95,10 @@ Load in Remotion with `@remotion/google-fonts/Onest` (weights 400, 500, 700) and
 | Language | Caption in the spoken language. English words inside Ukrainian speech stay in English spelling (e.g. "зробила це в Figma за 5 хвилин") | Tetiana's rule |
 | Numbers | Digits, not words: "5 хвилин", "3 tips" | Faster to read |
 | Filler words | Never captioned (they're cut anyway, section 8) | |
-| Colour | Measured once per shot on the chosen area's box (mean of the frames): **ink #111111** if mean luminance > 62%; otherwise **porcelain #F6F5F1** if the picture is warm (mean Lab b* > +6, e.g. lamp light, skin, wood, beige) and **white #FFFFFF** if it is neutral or cool (b* ≤ +6, e.g. grey coat, daylight, screens, black and white). The chosen colour must reach a contrast of ≥ 4.5:1 against the box; if it doesn't, use whichever of the three colours does (e.g. ink on a mid-grey coat, 6.4:1, beats white at 3:1); if none does, try the next calmest area | Colour that matches the warmth and saturation of the picture, as Tetiana asked; only these 3 colours exist in the design system |
-| Colour stability | One colour per shot; when the colour changes between shots it changes on the cut, never mid-phrase | No flicker |
-| Stroke / glow | No stroke, no hard drop shadow. Regular captions stay plain; the caption keyword gets the soft text glow (section 2) | The glow stays special when only accents have it |
-| Last resort | If no area passes 4.5:1, use plain text in the empty area with the best contrast. **Never put captions in a pill automatically** | Tetiana rejected pills on every caption (2026-10-05). A pill behind a caption only by hand, for one hard shot, if she asks |
+| Colour | **One colour for the whole reel**, chosen once before placing captions: white #FFFFFF by default. Porcelain #F6F5F1 (white's warm twin) only if every shot is warm; ink #111111 only if white would need haze level 2 in more than half the reel and ink passes the check on every shot (e.g. the whole reel is in front of a white wall). How to pick and check: section 1.6 | Tetiana: a colour that flips for one shot (white → black → white) looks rough. Pro editors keep one caption style for a whole video |
+| Colour stability | Never changes between shots, not even for one shot. Readability on a bright shot comes from the caption haze, a calmer area or smaller text, never from a new colour | No flicker |
+| Stroke / glow | No stroke, no hard drop shadow, no box. Captions get the soft caption haze when a shot needs it (section 1.6); the caption keyword also gets the soft text glow (section 2) | The haze is for reading; the glow stays special |
+| Last resort | If a shot stays under 3:1 even with haze level 2 in every calm area: keep the reel's colour, use haze level 2 in the best area, and list the shot in the edit notes. Never switch colour. **Never put captions in a pill automatically** | Tetiana rejected pills on every caption (2026-10-05). A pill behind a caption only by hand, for one hard shot, if she asks |
 | When hidden | While a hook title, section title, beat word or CTA line is on screen, and during full-screen paper layouts that show the same words | The reference does this: one text voice at a time |
 
 ### 1.3 Keyword highlight
@@ -104,7 +106,7 @@ Load in Remotion with `@remotion/google-fonts/Onest` (weights 400, 500, 700) and
 | Rule | Value | Why |
 | --- | --- | --- |
 | Style | Playfair Display Italic 400, 115% of the caption (67px), same colour, with the soft text glow (section 2). Never pink, never underlined, never a box | Design system `highlight` |
-| How many | Max 1 per chunk and max 1 every 6 s (so about 5–9 per 45 s reel) | Keeps it a seasoning |
+| How many | At most 1 per chunk and 1 every 6 s | Keeps it a seasoning |
 | Which word | In this order: 1) the result or number ("за 5 хвилин", "x2"), 2) the tool or thing being named (Claude, Figma), 3) the contrast word in a "not X but Y" line, 4) the emotional word that carries the point ("красиво", "легко") | Highlights the word you'd stress when speaking |
 | Never | Function words (і, в, на, the, a, to), the first word of the reel, two keywords in a row | |
 
@@ -112,19 +114,62 @@ Load in Remotion with `@remotion/google-fonts/Onest` (weights 400, 500, 700) and
 
 | Rule | Value | Why |
 | --- | --- | --- |
-| Style | `display` (Onest 700, 118px) + optional `accent-line` (Playfair Italic 80px, straight), both with the soft text glow (section 2) | The system's Headline |
+| Style | `display` (Onest 700, 72–118px on footage, 118px on paper) + optional `accent-line` (Playfair Italic at 68% of the display, straight), both with the soft text glow (section 2) | The system's Headline |
 | Alignment | Left edge at the 68px side margin (x 68). Never centred | Design system: never centre the display |
 | When | Optional. Use it when a shot has a calm area big enough for it; otherwise skip it (the hook can be spoken, with captions) or put the title on the cover | A title must never force a band or a reframe |
-| Position | No fixed height. The whole block (display + accent line) goes in the calmest empty area of the shot that fits it at x 68 (section 3.3), upper or lower part of the frame; accent line 14px below the display, flush left at the same x 68. Keep it inside the 4:5 crop (y 285–1635) when possible | Text goes where the shot has room, inside the safe zones |
+| Position | No fixed height. The whole block (display + accent line) goes in the calmest empty area of the shot that fits it at x 68 (section 3.3), upper or lower part of the frame; accent line 14px below the display, flush left at the same x 68. Keep it inside the middle 3:4 area the profile grid shows (y 240–1680) when possible | Text goes where the shot has room, inside the safe zones |
 | One title block | Display + accent line are one object: same left edge, built, placed and removed together (Soft Focus Title / Title Out). The accent line is never centred, never moved right or down, never placed in an area of its own, and never treated as a caption by caption detection, placement or Chunk Swap | It must read as part of the title, not as a separate caption |
 | Length | Display: max 2 lines, max 14 characters per line. Accent line: max 22 characters | Readable in under 1 s |
 | Build | Each line appears when she says it (line by line, not word by word), with Soft Focus Title (section 5) | Keeps the reference's build-up feeling without word-by-word switching |
 | Duration | On for 2.5–4.0 s, exit with Soft Focus Out | |
-| Where | Hook (0–3 s), each new section of a tutorial (max 3 per reel), the CTA; each one only if the shot has room | |
+| Where | Hook (0–3 s) and each new section of a tutorial (max 3 per reel); each one only if the shot has room. The CTA has its own block (section 11.1) | |
 
 ### 1.5 Accent font use (Playfair Display Italic)
 
 Only for: the caption keyword, the accent line under a display title, the beat word, and the CTA keyword. Never a whole caption, never a paragraph.
+
+### 1.6 Caption readability: one colour + soft haze
+
+How pro editors solve this: Netflix, the BBC and most social captions keep one text colour for the whole video and get readability from a box, an outline or a shadow behind the letters. Switching the text colour per shot is not the usual practice: the flip pulls the eye away from her face. Hard rule 2 rules out the box and her style rules out outlines, so the tool here is the **caption haze**: a soft, wide, dark blur behind the letters, with no offset and no edges. It darkens the picture just around the words and reads as depth, not as a shape.
+
+| Level | When (contrast without haze) | White or porcelain captions | Ink captions |
+| --- | --- | --- | --- |
+| 0 | ≥ 4.5:1 | none | none |
+| 1 | 3:1 to 4.5:1 | `text-shadow: 0 0 14px rgba(17,17,17,0.40), 0 0 36px rgba(17,17,17,0.22)` | `0 0 14px rgba(246,245,241,0.45), 0 0 36px rgba(246,245,241,0.25)` |
+| 2 | under 3:1 | `0 0 10px rgba(17,17,17,0.55), 0 0 28px rgba(17,17,17,0.35), 0 0 56px rgba(17,17,17,0.18)` | `0 0 10px rgba(246,245,241,0.60), 0 0 28px rgba(246,245,241,0.38), 0 0 56px rgba(246,245,241,0.20)` |
+
+| Rule | Value |
+| --- | --- |
+| Never a shape | No edge, no offset, no rounded corners: on a still frame you can't tell where the haze ends. If you can, it is too strong |
+| Changes | The level is chosen per shot. It changes only at a cut, together with the Chunk Swap (140 ms fade), so it never pops on or off mid-phrase |
+| Keyword | Haze underneath, the soft text glow on top |
+| Also for | Titles, beat word, CTA and pill-less labels over footage: they keep their colour and get the same haze when a shot is bright |
+
+**Contrast check** (run for every shot after placing the caption, on the SDR render, i.e. what the viewer sees):
+
+1. Take every 2nd frame of the shot. In each, crop the caption's real box: the text's width × 90px, plus 16px padding.
+2. Turn the pixels into relative luminance (the WCAG sRGB formula).
+3. Take the **brightest 10% of pixels** in the box for white or porcelain captions (the darkest 10% for ink). An average hides the bright window or white shirt that eats the letters.
+4. The **worst frame** of the shot decides. Contrast = (lighter + 0.05) / (darker + 0.05).
+5. With haze, recompute with the background darkened by 40% (level 1) or 60% (level 2); lightened by the same for ink.
+6. If the box is busy (edge density over 8% with a Sobel filter, or visible motion), treat the result as one level worse.
+7. Decide: ≥ 4.5:1 → level 0. 3:1 to 4.5:1 → level 1. Under 3:1 → first try the next calm area; if none passes, level 2. (58px is "large text", where 3:1 is the readable minimum; 4.5:1 is our target.)
+8. Write a one-line contrast report per shot in the edit notes: shot, area, worst contrast, haze level.
+
+**Picking the reel's colour:** run steps 1–4 for white on every shot. Stay with white unless white needs level 2 in more than half the reel and ink passes at level 0–1 on every shot.
+
+### 1.7 Captions in the first 3 seconds
+
+Most viewers decide in the first 1–3 s, and many watch with the sound off. So when there is no hook title, the captions are the hook.
+
+| Rule | Value |
+| --- | --- |
+| Start | With no hook title, captions start on frame 0; the first chunk is fully visible by frame 3 (100 ms) |
+| Say the point first | The first chunk carries the promise, the result or who it's for, never context ("привіт", "отже", "so today"). If her first words are context, cut them (section 8) so the first caption is the hook |
+| Read as one hook | The captions in the first 3 s together read as a complete hook of about 5–10 words: what you get, or who it's for, plus a reason to stay |
+| One keyword | Highlight the strongest word of the hook (the number, result or tool) in Playfair Italic with the text glow; not the very first word (section 1.3) |
+| Place near her eyes | The first captions go in a calm area close to her eye line (above or beside her head when there is room), inside the middle 3:4 area (y 240–1680), so one look takes in her face and the words |
+| Calm screen | Nothing else animates in the first 3 s except the slow push, the caption swaps and, if used, the handle tag; no pill or pop-up competes with the hook |
 
 ---
 
@@ -134,22 +179,23 @@ Every value comes from the design system tokens.
 
 | Element | Colour | Token | Why |
 | --- | --- | --- | --- |
-| Captions over footage | #FFFFFF, #F6F5F1 or #111111, chosen per shot (section 1.2) | `on-glass` / `paper` / `ink` | Matches the picture's warmth and brightness |
-| Titles, labels, CTA over footage | #FFFFFF (or #111111 when the title area's mean luminance > 62%) | `on-glass` / `ink` | |
+| Captions over footage | One per reel: #FFFFFF (default), #F6F5F1 or #111111 (section 1.2) | `on-glass` / `paper` / `ink` | One steady colour; bright shots get the caption haze |
+| Titles, labels, CTA over footage | #FFFFFF, with the caption haze when a shot is bright (section 1.6) | `on-glass` | Same steady colour as the captions |
 | Keyword in captions | same as its caption | — | `highlight`: same colour |
 | Status pill progress line | track rgba(255,255,255,0.18), fill rgba(255,255,255,0.85), 3px | `on-glass` at opacity | Stays inside the pill's white-on-glass palette; pink stays for the dot |
 | Paper background (split layout) | #F6F5F1 | `paper` | The only background colour in the Paper theme |
-| Ink theme (split layout only) | ground #151413, text and icons #F3F1EC, secondary #9E9890; pink, glass and photos unchanged | `paper` / `ink` / `muted` in Ink (`data-theme="ink"`) | The design system's dark theme. Pick one theme per reel in the brief and use it for every split layout (L3); never mix. Text over footage is unaffected ⚑ ASSUMPTION |
-| Text, icons and lines on paper | #111111 (Ink theme: #F3F1EC) | `ink` | |
+| Ink theme (split layout only) | ground #151413, text #F3F1EC, secondary #9E9890; pink, glass and photos unchanged | `paper` / `ink` / `muted` in Ink (`data-theme="ink"`) | The design system's dark theme. Pick one theme per reel in the brief and use it for every split layout (L3); never mix. Text over footage is unaffected ⚑ ASSUMPTION |
+| Text and lines on paper | #111111 (Ink theme: #F3F1EC) | `ink` | |
 | Secondary notes on paper (e.g. "source:") | #6E6A64 | `muted` | Captions/secondary only |
-| Dot in pills, waveform bars | #F2A7C3 | `accent-pink` | The one accent; never text, never a fill |
+| Dot in pills | #F2A7C3 | `accent-pink` | The one accent; never text, never a fill |
 | Frosted pill fill | linear 180°: rgba(34,34,36,0.52) → rgba(14,14,16,0.60) | `glass-dark-*` | Smoky see-through glass |
 | Frosted pill rim | 1px, rgba(255,255,255,0.30) at corners → rgba(255,255,255,0.10) on long sides | `glass-border*` | |
 | Glow | radial, #F2A7C3B3 → transparent at 68%, about 540px wide | `glow-strong` | One soft pink glow behind the focal point; it may sit behind a title or the CTA |
 | Text glow | white text: `text-shadow: 0 0 6px rgba(255,255,255,0.35), 0 0 18px rgba(255,255,255,0.18), 0 0 40px rgba(242,167,195,0.14)`; ink text on paper: `0 0 24px rgba(242,167,195,0.22)` | `text-glow` | A light bloom with a hint of pink halation, so accent text feels softly lit, a little wet, never flat. On accent text only: display title, accent line, caption keyword, pill text, beat word, CTA keyword. Never on every word or on regular captions |
+| Caption haze | #111111 at 18–55% (light #F6F5F1 version for ink captions), blurred, no offset | `text-haze-1` / `text-haze-2` | Readability on bright shots without a box (section 1.6) |
 | Section / layout dissolve tint | rgba(246,245,241,0.30) → 0 | `paper-tint` → `paper-clear` | The blur dissolve's tint |
 
-Not allowed: any other colour, coloured backgrounds, pink text, mint, neon, any gradient other than the pill fill, the glow, the text glow and the dissolve tint above.
+Not allowed: any other colour, coloured backgrounds, pink text, mint, neon, any gradient or shadow other than the pill fill, the glow, the text glow, the caption haze and the dissolve tint above.
 
 ---
 
@@ -167,8 +213,9 @@ One safe zone for every vertical video, built from the stricter edge of Instagra
 | Left | 68px (`margin-side`) | Edge of the phone | Reels ~60px · TikTok ~60px |
 
 - **Safe area:** x 68–1012 above y 900; x 68–920 from y 900 down; y 250–1440. When one simple rectangle is easier, use x 68–920, y 250–1440 (852×1190).
-- Apps change their layouts now and then, so these margins keep a little extra room on purpose. Check new UI against them about once a year.
-- LinkedIn and the profile grid may crop to 4:5: keep the hook title and key text inside y 285–1635 when possible ⚑ ASSUMPTION.
+- Apps change their layouts now and then, so these margins keep a little extra room on purpose. Check new UI against them about once a year, on a real phone, with a long post caption: Instagram's caption grows upwards when expanded, and some 2026 guides use a bottom margin of up to ~670px.
+- **Profile grid:** since January 2025 the Instagram grid shows reels cropped to 3:4, the middle 1080×1440 (y 240–1680). Keep the hook title and key text inside that area when possible; the cover must be (section 11.2).
+- LinkedIn covers the edges with its own buttons; the safe area above covers them.
 - Canvas: 1080×1920, 30 fps (convert 24/60 fps footage to 30).
 
 For code (Remotion or any renderer), use these as the margins of every overlay layer:
@@ -198,9 +245,9 @@ Positions for text and graphics on footage in this table are examples of a good 
 | --- | --- | --- | --- |
 | L1 | Full face | Footage fills 1080×1920, framed as she shot it | Default for talking-head speech |
 | L2 | Screenshot over footage | Footage full frame; one screenshot (or result, or photo) shown plain: sharp corners, no frame, no shadow, straight, max 760×560, placed by section 3.3 (e.g. above her head when that area is empty); never over her face or hands | She mentions something visual for 1.5–6 s: an app, a result, a before/after |
-| L3 | Paper split | Top 0–1000: paper #F6F5F1, optional step number `[2]` in `meta` at x 68, y 260; screen recording (sharp corners, no shadow) at x 68–1012, y 320–980. Bottom 1000–1920: footage, cropped so her face centres at y 1300 | **Only** when there is a real screen recording or UI to show for more than 6 s. Never as a fallback, never to make room for text, never with an empty or text-only paper half |
-| L4 | Full screen recording | Screen recording fills the frame (or sits on paper, x 68–1012); her voice carries it. No face card | Long screen walk-through where her face isn't needed |
-| L5 | Beat moment | Footage in black and white (saturation 0), beat word in the calmest empty area of the shot (e.g. lower middle), never on her face | One punchline or "no" moment per reel, 600–1200 ms |
+| L3 | Paper split | Top 0–1000: paper #F6F5F1, optional step number `[2]` in `meta` at x 68, y 260; screen recording (sharp corners, no shadow) at x 68–1012, y 320–980. Bottom 1000–1920: footage, cropped so her face centres at y 1300 (the one allowed exception to Hard rule 1) | **Only** when there is a real screen recording or UI to show for more than 6 s. Never as a fallback, never to make room for text, never with an empty or text-only paper half |
+| L4 | Full screen recording | Screen recording fills the frame (or sits on paper, x 68–1012); her voice carries it | Long screen walk-through where her face isn't needed |
+| L5 | Beat moment | Footage in black and white (saturation 0; the one allowed exception to Hard rule 6), beat word in the calmest empty area of the shot (e.g. lower middle), never on her face | One punchline or "no" moment per reel, 600–1200 ms |
 | L6 | CTA over footage | Footage full frame; `meta` lead-in with the `accent-line`-style keyword under it, as one block placed by section 3.3 (e.g. upper third when it is empty) (section 11) | Last 3–4 s |
 
 | Switch rule | Value | Why |
@@ -222,7 +269,7 @@ There are no fixed positions for text or graphics on footage. For each shot, tex
 | Stability | Chosen once per shot; it never moves mid-shot and may change only on a cut | Moving text looks nervous |
 | Several elements | Place the most important first (title or CTA, then a screenshot, then a pill, then the caption), each in its own calm area, at least 40px apart, never overlapping. One text voice at a time still applies (section 1.2) | |
 | Alignment | The display title block always has its left edge at the 68px side margin (never centred); only its height changes. Other elements are centred in their area | Design system: display left-aligned |
-| Contrast | After choosing, the colour rule in section 1.2 must reach ≥ 4.5:1; if it can't, use the next calmest area | |
+| Contrast | After choosing, run the contrast check (section 1.6): ≥ 4.5:1 plain, or with the caption haze; if a shot is under 3:1, try the next calmest area first | |
 | No room | If no area fits, in this order: 1) make it smaller (display down to 72px, caption down to 48px), 2) fewer words, or drop the accent line, 3) another calm area, lower part included, 4) leave it out (pill, handle tag, even the title; captions alone are fine). Never add a band or box, never move her, never fall back to her face or hands | The white-band edit on IMG_6777 came from forcing a title in |
 | Safe zones | Always inside the safe area of section 3.1: no text in the top 250px, the bottom 480px, or right of x 920 from y 900 down. In code, use the `SAFE` margins | The apps' own buttons and captions cover those |
 | Paper layouts | Split screen (L3's paper half) keeps its grid; there is no footage to avoid there | |
@@ -269,7 +316,7 @@ Named animations. CapCut equivalents are given only as the closest feel; the nam
 | Pill Rise | Frosted pill | y +24→0, opacity 0→1, backdrop blur 0→24px | 260 ms | ease-enter | Slide Up |
 | Blur Dissolve (section) | Cut between sections | outgoing: blur 0→16px + opacity 1→0; incoming: scale 1.04→1, blur 16→0px; paper tint 0.30 peak at midpoint | 240 ms | ease-move | Blur (transition) |
 | Blur Dissolve (layout) | Layout changes | same as above | 320 ms | ease-move | Blur |
-| Pop In + NEW | Pop-ups: result screenshot after a status pill, fact pill | scale 0.90→1.02→1.00, opacity 0→1, blur 6→0px. Remotion: `spring({fps, config: {damping: 18, stiffness: 170, mass: 1}})` mapped to scale 0.90→1 (≈ 2% overshoot); check it never exceeds 1.025 | 320 ms | spring | Pop / Zoom In |
+| Pop In | Pop-ups: result screenshot after a status pill, fact pill | scale 0.90→1.02→1.00, opacity 0→1, blur 6→0px. Remotion: `spring({fps, config: {damping: 18, stiffness: 170, mass: 1}})` mapped to scale 0.90→1 (≈ 2% overshoot); check it never exceeds 1.025 | 320 ms | spring | Pop / Zoom In |
 | Pop Out | Pop-ups | scale 1→0.96, opacity 1→0, blur 0→4px | 180 ms | ease-exit | — |
 | Status Pulse | Status pill dot | opacity 0.55→1→0.55 and glow 0.3em→0.6em, loop | 1200 ms per loop | ease-move | — |
 | Thinking Dots | "…" after the status text | 3 dots, each fades 0.25→1 in turn, 200 ms apart, loop | 900 ms per loop | ease-move | — |
@@ -303,7 +350,7 @@ Named animations. CapCut equivalents are given only as the closest feel; the nam
 
 ### 6.2 Not allowed
 
-Bands, bars, strips, panels or paper areas added behind text on footage, full-width progress or timeline bars across the video, emoji, stickers, hearts, arrows that point at things, circles around things, filled or 3D icons, polaroids, photo frames, tape strips, tilted or rotated text or cards, rounded cards, borders, boxes, shadowed cards, face cards in a corner, voice-message pills with a waveform, end cards, outline icons, bracket tags, drop shadows (except under a pill), subscribe/like animations, logo bugs, countdown timers. Progress is shown only inside the status pill (6.5) or with the step number `[1]`, `[2]`, `[3]`.
+Everything in the Never list (section 14). Progress is shown only inside the status pill (6.5) or with the step number `[1]`, `[2]`, `[3]`.
 
 ### 6.3 Screen recordings
 
@@ -322,7 +369,7 @@ Design system frosted glass pill: fill `glass-dark` (section 2), backdrop blur 2
 | Fact pill | 31px (`pill`) | 2–4 words stating one fact: "6 категорій поз", "за 5 хвилин" |
 | Caption in a pill | 58px (`reel-caption`), dot omitted | Only by hand, when Tetiana asks for it on a shot (never automatic, section 1.2) |
 
-### 6.5 Status pill + NEW
+### 6.5 Status pill
 
 The "work in progress" pill from the earlier test edit, which Tetiana liked, built on the design system's frosted glass pill. Use it whenever something is happening that the viewer waits for: Claude thinking, an app generating, a render, an upload, a search.
 
@@ -351,7 +398,7 @@ Think before picking. Ask of every sound: would a premium app (Apple, Linear, No
 | # | Source | What it is | Use it for |
 | --- | --- | --- | --- |
 | 1 | **`@remotion/sfx`** (Remotion's own sound package, MIT, files peak-normalised to -3 dB) | Install once inside her Remotion project (`Claude/video-tools/remotion`): `npx remotion add @remotion/sfx`. Import the URL in code: `import {whoosh} from '@remotion/sfx'` | whoosh, click, switch, page turn, shutter, ding (table 7.2) |
-| 2 | **ffmpeg synthesis** (works offline, no account) | Recipes in 7.2, tested | Sounds Remotion doesn't have: the soft pop |
+| 2 | **ffmpeg synthesis** (works offline, no account) | Recipe in Appendix A, tested | Sounds Remotion doesn't have: the soft pop |
 
 No ElevenLabs or any other paid sound service (Tetiana's decision, 2026-10-06).
 
@@ -359,11 +406,11 @@ Never use from `@remotion/sfx`: `whip` and every meme sound (`bruh`, `vineBoom`,
 
 ### 7.2 The kit (event → sound)
 
-Kit files live in `Claude/video-tools/remotion/public/sfx/` (Remotion loads them with `staticFile('sfx/<name>.wav')`). That folder is created in Round 0 (section 16). Remotion volume = 10^((target peak + 3) / 20), because every kit file is normalised to a -3 dB peak.
+Kit files live in `Claude/video-tools/remotion/public/sfx/` (Remotion loads them with `staticFile('sfx/<name>.wav')`). That folder is created once when the kit is built (Appendix A). Remotion volume = 10^((target peak + 3) / 20), because every kit file is normalised to a -3 dB peak.
 
 | Kit file | Event | Source | Treatment | Target peak | Remotion `volume` |
 | --- | --- | --- | --- | --- | --- |
-| `pop-soft.wav` | Pop-up appears (Pop In: result screenshot, fact pill) | ffmpeg: `ffmpeg -f lavfi -i "aevalsrc='0.8*sin(2*PI*(260*t+2400*t*t))*exp(-34*t)':s=48000:d=0.16" -af "afade=t=in:d=0.004,lowpass=f=3500,afade=t=out:st=0.13:d=0.03" pop-soft.wav` | low-pass 3.5 kHz | -22 dBFS | 0.11 |
+| `pop-soft.wav` | Pop-up appears (Pop In: result screenshot, fact pill) | ffmpeg synthesis (recipe in Appendix A) | low-pass 3.5 kHz | -22 dBFS | 0.11 |
 | `whoosh-soft.wav` | Layout change, section change (Blur Dissolve) | `@remotion/sfx` `whoosh` (https://remotion.media/whoosh.wav) | low-pass 6 kHz, trim to 300–400 ms | -24 dBFS | 0.09 |
 | `switch-soft.wav` | Status Swap (status pill text changes) | `@remotion/sfx` `uiSwitch` (https://remotion.media/switch.wav) | low-pass 6 kHz | -26 dBFS | 0.07 |
 | `click-soft.wav` | UI click in a screen recording (only clicks that change the screen) | `@remotion/sfx` `mouseClick` (https://remotion.media/mouse-click.wav) | none | -24 dBFS | 0.09 |
@@ -378,8 +425,8 @@ Kit files live in `Claude/video-tools/remotion/public/sfx/` (Remotion loads them
 
 | Rule | Value | Why |
 | --- | --- | --- |
-| Music | **None in the file.** Tetiana adds audio in the app herself if she wants it | Her decision |
-| One kit | Build the kit once (Round 0), get Tetiana's OK, then never swap or add sounds per video. Changes go through this file | Same sounds every time = a recognisable style |
+| Music | **None in the file.** Tetiana adds audio in the app herself if she wants it; then the music sits well under her voice so every word stays clear | Her decision |
+| One kit | Build the kit once (Appendix A), get Tetiana's OK, then never swap or add sounds per video. Changes go through this file | Same sounds every time = a recognisable style |
 | Local copies | Download the Remotion sounds into `public/sfx/` instead of streaming the URLs at render time | Renders work offline and the kit can't change under us |
 | Kit processing | For each file: trim leading silence, 3 ms fade in, 20 ms fade out, the low-pass in 7.2, mono, 48 kHz, 24-bit WAV, peak-normalised to -3 dBFS | All kit files behave the same in the mix |
 | Kit manifest | `public/sfx/kit.json`: for each file its event, source (package export or ffmpeg recipe), date | Anyone can rebuild or audit the kit |
@@ -387,7 +434,7 @@ Kit files live in `Claude/video-tools/remotion/public/sfx/` (Remotion loads them
 | SFX timing | Sound starts on the same frame as the visual event (Pop In: 1 frame before) | Sync is what makes it feel professional |
 | SFX level | Target peaks in 7.2, i.e. 8–14 dB under the voice peaks | Soft, never harsh |
 | Room tone | Fill every cut and every removed pause with 0.5 s of her own room tone at its natural level, crossfaded 30 ms | Without music, pure digital silence between words sounds broken |
-| Voice chain (ffmpeg) | `highpass=f=80, afftdn=nr=10, deesser=i=0.4, acompressor=threshold=-20dB:ratio=3:attack=10:release=120, loudnorm=I=-14:TP=-1:LRA=7` | Clean, even voice at platform loudness (the reference measures -14.4 LUFS) |
+| Voice chain | High-pass, light denoise, de-ess, gentle compression, loudness to -14 LUFS (ffmpeg chain in Appendix A) | Clean, even voice at platform loudness (the reference measures -14.4 LUFS) |
 | Master | -14 LUFS integrated, -1 dBTP | |
 
 ---
@@ -418,7 +465,7 @@ Retention devices, all built from the motion and graphics in this file. A menu, 
 | --- | --- | --- | --- |
 | Open loop | Hook shows the result for 0.8–1.2 s as a Pop In screenshot (or says it in the hook title), then it Pops Out; the full result returns at the payoff | 0–3 s | 1 |
 | Anticipation | Status pill sequence (6.5): the viewer watches something "work" before the result pops up | Any time a process happens | 3 |
-| Pattern interrupt | Cut-zoom, layout change, pop-up or title: something changes every 3–5 s | Throughout | (section 8) |
+| Pattern interrupt | Cut-zoom, layout change, pop-up or title: something changes about every 4–6 s; a strong shot may hold longer | Throughout | (section 8) |
 | Progress signal | Step index `[1]` → `[2]` → `[3]` in tutorials, or the status pill's progress line | Tutorials, processes | — |
 | Re-hook | A section title with a new promise ("а тепер найцікавіше", "the best part") + whoosh, at 40–55% of the reel | Middle | 1 |
 | Contrast | L5 beat moment: black and white + one big Playfair word | The surprising line | 1 |
@@ -436,7 +483,7 @@ Retention devices, all built from the motion and graphics in this file. A menu, 
 | 0–150 ms | Nothing animates yet except the slow push |
 | 150 ms – 1.2 s | If the shot has room: hook title (placed by section 3.3, left edge x 68) line 1 builds (Soft Focus Title), line 2 120 ms later, accent line last. Captions hidden while the title is on |
 | 0.6 – 3.0 s | Handle tag `@tanii444.ka` in `meta`, placed by section 3.3 in a calm area away from the title |
-| ≈ 3.0 s | First cut-zoom to 100% on the first jump cut; Title Out; captions start |
+| ≈ 3.0 s | First cut-zoom to 100% on the first jump cut; Title Out; captions start. With no hook title, captions run from frame 0 (section 1.7) |
 
 Hook title (optional) = the promise in max 2 short lines + an optional accent line. Tetiana talks about general topics, so these templates are formulas that work for any subject; fill in the brackets.
 
@@ -462,8 +509,8 @@ Rule for the spoken hook: the first sentence states the result, not the context.
 | --- | --- | --- |
 | 0–3 s | Hook: the result or claim | L1 + hook title |
 | 3–8 s | Why it matters / the problem | L1, cut-zooms |
-| 8–30 s | 2–3 points, one idea each | L1; L2 card per point if there is something to show; 1 keyword per point |
-| 30–35 s | Payoff / proof | L2 result card or L5 beat moment |
+| 8–30 s | 2–3 points, one idea each | L1; an L2 screenshot per point if there is something to show; 1 keyword per point |
+| 30–35 s | Payoff / proof | L2 result screenshot or L5 beat moment |
 | last 3–4 s | CTA | L6 |
 
 ### 10.2 Tutorial with screen recording (45–60 s)
@@ -472,7 +519,7 @@ Rule for the spoken hook: the first sentence states the result, not the context.
 | --- | --- | --- |
 | 0–3 s | Hook: the finished result first | L2 screenshot of the result + hook title (if room) |
 | 3–7 s | What you need (tool, 1 line) | L1 + fact pill |
-| 7–45 s | Steps 1–3 (max 4), ≈ 8–12 s each | L3 paper split with `[1]`, `[2]`, `[3]` + section label; cut back to L1 for 1–2 s between steps |
+| 7–45 s | Steps 1–3 (max 4), ≈ 8–12 s each | L3 paper split with `[1]`, `[2]`, `[3]` + section label. Stay in L3 between steps: the step number changes (with `page-soft`), the layout doesn't. Go back to L1 only for a part longer than 6 s where her face matters |
 | 45–52 s | Result again | L2 or L3 |
 | last 3–4 s | CTA (keyword for the prompt / link) | L6 |
 
@@ -488,16 +535,34 @@ Rule for the spoken hook: the first sentence states the result, not the context.
 
 ---
 
-## 11. Ending
+## 11. Ending and cover
+
+### 11.1 Ending
 
 | Item | Value | Why |
 | --- | --- | --- |
-| Default CTA | Comment keyword, as in the reference: `meta` line "напиши в коментарях" (EN: "comment") with the keyword in Playfair Display Italic 80px directly under it, straight, the two lines centred on each other as one block, #FFFFFF. No fixed position: the block goes where the shot has room (section 3.3) | Comment CTAs drive reach; the reference's strongest graphic, made lowercase per the system |
+| Default CTA | Comment keyword, as in the reference: `meta` line "напиши в коментарях" (EN: "comment") with the keyword in Playfair Display Italic 80px directly under it, straight, the two lines centred on each other as one block, #FFFFFF (with the caption haze when the shot is bright). No fixed position: the block goes where the shot has room (section 3.3) | Comment CTAs drive reach; the reference's strongest graphic, made lowercase per the system |
 | CTA wording | Max 2 lines. Patterns: "напиши «промпт» в коментарях" · "збережи, щоб не загубити" · "comment «guide» and I'll send it" | Design system: CTA 1–2 lines, imperatives |
 | CTA timing | Appears with the first word of her spoken CTA, stays to the end; captions hidden meanwhile | |
 | Loop rule | No end card. Cut 300 ms after her last word; the last frame should match the first frame's framing (both 110%), and the last line should lead into the hook where possible ("…і саме тому" → "пост за 5 хвилин") | Instagram replays automatically; a seamless loop adds watch time |
 
 Default: comment-keyword CTA with a seamless loop. No end card.
+
+### 11.2 Cover
+
+The cover is what people see in the profile grid and when the reel is shared. It is made with every reel.
+
+| Rule | Value | Why |
+| --- | --- | --- |
+| Size | 1080×1920 PNG. Everything that matters inside the middle 1080×1440 (y 240–1680); face and title ideally inside the centre 1080×1080 | The Instagram grid crops reels to 3:4; other places crop tighter |
+| Frame | A real frame from the reel: her face clear, eyes open, a readable expression, mouth not mid-word, no motion blur. No grade, same colour as the reel | Faces get taps; a mid-word frame looks odd |
+| Title | 3–5 words: the hook promise, or a shorter version of the hook title. Lowercase, brand names excepted | It is read at thumbnail size in under a second |
+| Style | The title block: Onest 700 display + optional Playfair Italic accent line (68% of the display), left edge x 68, soft text glow, caption haze if the frame is bright | Same look as the reel, so the cover feels like part of it |
+| Size of the title | As large as fits, at least 96px. If it doesn't fit, Hard rule 3 applies: smaller (not under 96px), fewer words, another calm area, or a different frame | Small or thin text disappears in the grid |
+| Placement | By section 3.3 on that frame: never on her face or hands, never a band or box | Same rules as the reel |
+| Consistency | Same layout, type and colour on every cover, so the profile grid reads as one set | A steady grid tells new visitors this is a real brand |
+| Keep off | Handle tag, pills, glow, emoji, arrows | One message per cover |
+| Check | Look at it at 1/4 size (about one grid tile). If the title can't be read in 1 s, make it bigger or shorter | |
 
 ---
 
@@ -505,7 +570,7 @@ Default: comment-keyword CTA with a seamless loop. No end card.
 
 | Item | Value | Why |
 | --- | --- | --- |
-| Input | iPhone 17 Pro HEVC; if HDR (HLG / Dolby Vision), tone-map to SDR Rec.709 first: `zscale=t=linear:npl=100,format=gbrpf32le,zscale=p=bt709,tonemap=hable:desat=0,zscale=t=bt709:m=bt709:r=tv,format=yuv420p` | HDR looks washed out or blown on many phones once overlays are added |
+| Input | iPhone 17 Pro HEVC; if HDR (HLG / Dolby Vision), tone-map to SDR Rec.709 first (filter in Appendix A) | HDR looks washed out or blown on many phones once overlays are added |
 | Grade | **None.** Don't change saturation, contrast, curves or colour balance | Tetiana: the soft warm grade made her footage look awful (2026-10-05). Her iPhone colour is the look |
 | Skin | Never push saturation above 100%; no beauty filter, no skin smoothing | Natural and premium |
 | Mixed light | Leave each clip as shot. No white-balance matching | Tetiana: no colour change beyond HDR → SDR |
@@ -548,46 +613,26 @@ Measured: one continuous talking-head setup, hard jump cuts with framing alterna
 
 ### 13.2 Earlier test edit (IMG_6777_edit_v1)
 
-Keep: soft blur dissolves, gentle zoom steps, frosted pills, the "Claude працює…" status pill with its pulsing dot and animated dots (Tetiana's favourite, now section 6.5 with a pink dot), one accent, restraint. Drop: Manrope, Cormorant Garamond, mint #9BE7B0, uppercase labels, dark bottom gradient, word-by-word light-up, the warm grade.
+Keep: soft blur dissolves, gentle zoom steps, frosted pills, the "Claude думає…" status pill with its pulsing dot and animated dots (Tetiana's favourite, now section 6.5 with a pink dot), one accent, restraint. Drop: Manrope, Cormorant Garamond, mint #9BE7B0, uppercase labels, dark bottom gradient, word-by-word light-up, the warm grade.
 
 ### 13.3 Where to find more references
 
-For the professional, animated, pop-up feel Tetiana likes. Save the ones she likes into `04 Resources/Motion references` in the vault with one line on what to copy, then add them to 13.1's table format here.
-
-| Where | What to look for |
-| --- | --- |
-| Product launch videos by software companies (Apple keynotes and product pages, Linear, Raycast, Arc, Notion, Framer, Figma Config) | UI pop-ups, status states, soft blur transitions, sound design on clicks |
-| Savee and Pinterest | Search "ui motion", "kinetic typography minimal", "editorial motion design", "app launch video" |
-| Dribbble and Behance (Motion / Animation filters) | Status pills, loaders, notification pop-ups, card reveals |
-| LottieFiles | Ready animated loaders and status icons to study the timing |
-| Remotion Showcase (remotion.dev/showcase) | Videos made with the same tool we use, so anything there is buildable |
-| Screen Studio videos | How smooth, auto-zoomed screen recordings look in tutorials |
-| Instagram and TikTok search | "AI tools tutorial", "productivity app review", "ui animation", "motion designer reel"; save reels into a "style" collection and send them over |
-
-When sending a reference, a 3–10 s screen recording plus one line ("I like how the card pops in") is enough.
+Tips for finding new motion references are in `reference-sources.md` in this repo. They are for Tetiana, not rules for the editor.
 
 ---
 
-## 14. Do / don't
+## 14. Never
 
-| Do | Don't |
-| --- | --- |
-| Onest + Playfair Display Italic only | Any other font, Inter/Roboto/Arial even as fallback |
-| lowercase captions and titles | ALL CAPS, underlines, emoji |
-| 2–4 word caption chunks, ≥ 800 ms | Word-by-word, karaoke colour fills, bouncing words |
-| One keyword in Playfair Italic, same colour | Pink, yellow or boxed keywords |
-| Captions on empty space, in white, porcelain or ink matched to the shot; a soft text glow on titles, keywords and pill text | Text strokes, hard drop shadows, a glow on every word, boxes, bands or paper strips behind text, captions on her face |
-| Footage framed as she shot it; text adapts to the shot | Moving, shrinking or reframing her to fit text; paper split without a screen recording |
-| Everything straight: titles, accent lines, cards | Tilted or rotated text or cards |
-| Cut-zoom on jump cuts, 100% ↔ 110% | Whip zooms, shakes, spins, glitch, RGB split, flash frames |
-| One glass element and one glow at a time, only when they help | Glass and glow on every screen |
-| Screenshots shown plain (sharp corners, no frame, no shadow) | Device mockups, polaroids, postcard-style cards, tape, white frames, rounded cards, shadows, face cards, floating 3D icons |
-| Soft pop, click and whoosh mapped to events | A sound on every word or zoom; music baked into the file |
-| Status pill while something is in progress, then the result pops in | Loading spinners, full-width progress bars, countdowns |
-| Her own iPhone colour, no grade | Any grade or LUT, teal-orange looks, heavy contrast, beauty filters |
-| Something visibly changes every 3–5 s | 6+ s with no visual change; or changes under 1.5 s apart |
-| Left-aligned display titles at x 68 | Centred display titles, more than 2 display lines |
-| Paper #F6F5F1, or Ink #151413 for a whole reel, for the split layout | Coloured backgrounds, pure black, mixing Paper and Ink in one reel, blurred-video fill backgrounds |
+One list for everything that stays out of a reel. The Hard rules at the top are the short version; the design system's own Never list says the same for all formats.
+
+- **Her footage:** moving, shrinking, cropping or reframing her to fit text (only L3 crops her, for a real screen recording); text on her face or hands; any grade, LUT, teal-orange look, heavy contrast, beauty filter or white-balance matching (only L5 goes black and white).
+- **Behind text:** bands, bars, strips, panels, paper areas, scrims, boxes, outlines or strokes, hard drop shadows, automatic caption pills. Allowed: the soft caption haze, the text glow and the pink glow.
+- **Type:** fonts other than Onest and Playfair Display Italic (no Inter, Roboto or Arial, not even as fallback); ALL CAPS; underlines; centred display titles; more than 2 display lines; word-by-word or karaoke captions; bouncing words; pink, yellow or boxed keywords; a glow on every word; a caption colour that changes mid-reel.
+- **Colour:** any colour outside section 2; coloured backgrounds; pure black; pink text or pink fills; mixing Paper and Ink in one reel.
+- **Graphics:** emoji, stickers, hearts, arrows that point at things, circles around things, icons of any kind, polaroids, photo frames, tape, white frames, rounded or shadowed cards (the pill's own shadow is fine), device mockups, face cards, voice-message pills with a waveform, end cards, bracket tags, logo bugs, subscribe or like animations, countdowns, loading spinners, full-width progress or timeline bars, blurred-video fill backgrounds.
+- **Motion:** tilted or rotated text or cards; whip zooms, shakes, spins, glitch, RGB split, flash frames; bounce or overshoot (except Pop In's 2%); more than 1 glass element and 1 glow on screen; visual changes under 1.5 s apart; more than 6 s that feels stuck.
+- **Sound:** music in the file; a sound on every word or zoom; meme sounds (list in 7.1); ElevenLabs or any paid sound service.
+- **Retired style:** Manrope, Cormorant Garamond, mint #9BE7B0 (the old test edit).
 
 ---
 
@@ -603,9 +648,11 @@ Copy into `02 Scripts/<video>.md` in the Obsidian vault.
 | Reel type | talking-head tip / tutorial with screen recording / story |
 | Language | uk / en |
 | Theme for paper layouts | paper / ink |
+| Caption colour for the whole reel (optional) | white (default) / porcelain / ink |
 | Audience | who exactly (e.g. "creators who post carousels and hate Canva") |
 | Hook (spoken, first sentence) | |
 | Hook title (optional; display, max 2 × 14 chars) | |
+| Cover title (3–5 words) | |
 | Accent line (max 22 chars) | |
 | Key points (max 3, one line each) | 1. 2. 3. |
 | Visuals to show (screenshots, recordings, B-roll) + timestamps or file names | |
@@ -623,40 +670,74 @@ Copy into `02 Scripts/<video>.md` in the Obsidian vault.
 
 Work in `Claude/videos/<video>/`. **One go by default:** run every round below without stopping and deliver the finished reel, then show her. Stop between rounds only when she asks for it. The rounds are the order of work, not review gates.
 
-### Round 0: build the sound kit (once, before the first edit)
+### Round 0: the sound kit
 
-- [ ] In `Claude/video-tools/remotion`: `npx remotion add @remotion/sfx`; create `public/sfx/`.
-- [ ] Download the 6 Remotion sounds in 7.2 into `public/sfx/` under the kit names.
-- [ ] Make `pop-soft` with the ffmpeg recipe in 7.2.
-- [ ] Process every file (7.3) and write `kit.json`.
-- [ ] Render `sfx-preview.mp4`: paper background, each kit name shown in `section-label` while its sound plays, 1 s apart. Tetiana listens and approves before any reel uses the kit.
+- [ ] Built once before the first edit (steps in Appendix A). Skip if `public/sfx/kit.json` exists.
 
 ### Round 1: captions only
 
 - [ ] Convert HDR to SDR, conform to 30 fps (section 12).
 - [ ] Whisper transcript with word-level timestamps (language set from the brief, never auto-detect), model from `Claude/video-tools/whisper-models`.
 - [ ] Fix spelling; keep English words in English spelling; lowercase (brand names excepted).
-- [ ] Chunk into 2–4 words, ≤ 24 chars, ≥ 800 ms (section 1.2). Mark keywords (section 1.3). Pick the caption position (section 3.3) and colour per shot.
-- [ ] Deliver `captions.json` + `captions.srt` and a readable list of chunks with times.
+- [ ] Chunk into 2–4 words, ≤ 24 chars, ≥ 800 ms (section 1.2); make the first 3 s a hook (section 1.7). Mark keywords (section 1.3). Pick the reel's caption colour once (section 1.6), then the position (section 3.3) and haze level per shot.
+- [ ] Write `captions.json` + `captions.srt` and a readable list of chunks with times (shown to her only if she asked for a stop).
 
 ### Round 2: cut dead air
 
 - [ ] Trim pauses > 400 ms to 200 ms; keep last takes; remove repeats and fillers (section 8).
 - [ ] 2-frame handles, 30 ms audio crossfades.
 - [ ] Re-time captions to the new cut.
-- [ ] Deliver `cut_v1.mp4` (no graphics) + `edl.txt` listing every removed range and which take was kept.
+- [ ] Write `cut_v1.mp4` (no graphics) + `edl.txt` listing every removed range and which take was kept (shown to her only if she asked for a stop).
 
 ### Round 3: first 15 s
 
-- [ ] HDR → SDR conversion (no grade), hook title, captions, cut-zooms, layouts, sound for 0–15 s only (Remotion).
+- [ ] Hook title, captions, cut-zooms, layouts, sound for 0–15 s only (Remotion). No grade.
 - [ ] Check safe zones with an overlay of the section 3.1 margins (or the Reels/TikTok UI) on the render.
 - [ ] Self-check the first 15 s (hook, safe zones, captions) and fix before going on. Deliver `preview_15s.mp4` only if she asked for a stop here.
 
 ### Round 4: full edit
 
 - [ ] Apply everything to the whole reel: screenshots, pills, status pills, beat moment, CTA, SFX, room tone (sections 3–11). No music.
-- [ ] QA: her face is where it was in the raw clip and no band, bar, panel or box was added behind text; fonts loaded (no fallback), captions never under 800 ms, caption position and colour fixed per shot with contrast ≥ 4.5:1, no text on her face, hands or busy detail, max 1 glass + 1 glow on screen, nothing tilted, no text in unsafe bands, max 2 zooms / 10 s, no stretch over about 6 s that feels stuck, -14 LUFS / -1 dBTP, no black first frame, loop point checked.
-- [ ] Export 1080×1920, 30 fps, H.264 High, 16–20 Mbps, AAC 48 kHz 320 kbps → `<video>_final.mp4`; plus a cover frame `<video>_cover.png` (1080×1920, hook title visible, key content inside the centre 1080×1440).
+- [ ] QA: her face is where it was in the raw clip and no band, bar, panel or box was added behind text; fonts loaded (no fallback), captions never under 800 ms, one caption colour for the whole reel, caption position fixed per shot, contrast report done with every shot ≥ 3:1 at its haze level (section 1.6), the haze never visible as a shape, no text on her face, hands or busy detail, max 1 glass + 1 glow on screen, nothing tilted, no text in unsafe bands, max 2 zooms / 10 s, no stretch over about 6 s that feels stuck, -14 LUFS / -1 dBTP, no black first frame, loop point checked.
+- [ ] Export 1080×1920, 30 fps, H.264 High, 16–20 Mbps, AAC 48 kHz 320 kbps → `<video>_final.mp4`; plus the cover `<video>_cover.png` (section 11.2).
+
+---
+
+## 17. Review loop
+
+The rules get better from real numbers, not guesses. Results live in `reel-log.md` in this repo.
+
+| When | What |
+| --- | --- |
+| 3–7 days after a reel is posted | Tetiana sends a screenshot of the reel's insights (views, average watch time, the retention graph, skip rate or 3-second hold, shares, saves, comments with the keyword). Claude adds one row to `reel-log.md`: date, reel, type, hook formula, length, the numbers, and where the retention graph drops (time and what was on screen then) |
+| Every 5 reels | Claude compares the rows: which hooks, lengths, layouts and first-3-second captions kept people longest, and where they leave. It proposes at most 2 rule changes, each with the numbers behind it |
+| A change | Only after Tetiana says yes. It goes into this file and the Decisions log with the reason (e.g. "formula 3 held twice as long in 4 of 5 reels") |
+
+- Never change a rule because of one reel. Change one or two things at a time, so the next reels show what worked.
+- Her taste wins over the numbers when they disagree.
+
+---
+
+## Appendix A: pipeline recipes
+
+Tool commands the rules above refer to. They also live in `make-reel.sh` and `kit.json` on the Mac; keep them in sync.
+
+**HDR → SDR (section 12):**
+`zscale=t=linear:npl=100,format=gbrpf32le,zscale=p=bt709,tonemap=hable:desat=0,zscale=t=bt709:m=bt709:r=tv,format=yuv420p`
+
+**Voice chain (section 7.3):**
+`highpass=f=80, afftdn=nr=10, deesser=i=0.4, acompressor=threshold=-20dB:ratio=3:attack=10:release=120, loudnorm=I=-14:TP=-1:LRA=7`
+
+**Soft pop (section 7.2):**
+`ffmpeg -f lavfi -i "aevalsrc='0.8*sin(2*PI*(260*t+2400*t*t))*exp(-34*t)':s=48000:d=0.16" -af "afade=t=in:d=0.004,lowpass=f=3500,afade=t=out:st=0.13:d=0.03" pop-soft.wav`
+
+**Building the sound kit (once, before the first edit):**
+
+- [ ] In `Claude/video-tools/remotion`: `npx remotion add @remotion/sfx`; create `public/sfx/`.
+- [ ] Download the 6 Remotion sounds in 7.2 into `public/sfx/` under the kit names.
+- [ ] Make `pop-soft` with the recipe above.
+- [ ] Process every file (7.3) and write `kit.json`.
+- [ ] Render `sfx-preview.mp4`: paper background, each kit name shown in `section-label` while its sound plays, 1 s apart. Tetiana listens and approves before any reel uses the kit.
 
 ---
 
@@ -664,18 +745,18 @@ Work in `Claude/videos/<video>/`. **One go by default:** run every round below w
 
 | Date | Decision |
 | --- | --- |
-| 2026-10-05 | Captions sit directly on video in empty space; colour white, porcelain or ink, matched to the picture's warmth and brightness |
+| 2026-10-05 | Captions sit directly on video in empty space; colour white, porcelain or ink, matched to the picture's warmth and brightness (per-shot colour later replaced by one colour per reel, 2026-10-06) |
 | 2026-10-05 | Hook templates are topic-agnostic formulas; she talks about general topics |
 | 2026-10-05 | No music in the file; soft popular SFX only (click, whoosh, pop) |
 | 2026-10-05 | Brand names keep their own spelling (Claude decided); everything else lowercase |
 | 2026-10-05 | Add the status pill and pop-ups she liked in the test edit; add interest triggers expressed as motion design |
 | 2026-10-05 | Ending default: comment-keyword CTA with a seamless loop (end card removed 2026-10-06) |
-| 2026-10-05 | Text sizes +20% (caption 58px, keyword 67px, pill 31px, label 48px, meta 36px, body 48px). Display title, accent line and beat word unchanged, already large |
+| 2026-10-05 | Text sizes +20% (caption 58px, keyword 67px, pill 31px, label 48px, meta 36px). Display title, accent line and beat word unchanged, already large |
 | 2026-10-05 | No automatic caption pills; plain text in the best slot |
 | 2026-10-05 | No colour grade; only HDR → SDR conversion |
 | 2026-10-05 | Sound sources: `@remotion/sfx` first, then ffmpeg synthesis; one fixed kit built in Round 0 and approved by Tetiana (ElevenLabs dropped 2026-10-06: paid) |
-| 2026-10-06 | Synced with the design system: polaroids, white frames and tape removed (screenshots and face cards are plain photo cards with `shadow-lift`); heart icon removed; nothing is ever tilted, the accent line included |
-| 2026-10-06 | Design system added a dark Ink theme; reels may use it for paper layouts (L3, end card), one theme per reel, chosen in the brief |
+| 2026-10-06 | Synced with the design system: polaroids, white frames and tape removed (screenshots and face cards are plain photo cards with `shadow-lift`; later reversed: screenshots are shown plain and face cards are gone); heart icon removed; nothing is ever tilted, the accent line included |
+| 2026-10-06 | Design system added a dark Ink theme; reels may use it for paper layouts (L3; the end card was later removed), one theme per reel, chosen in the brief |
 | 2026-10-06 | Accent line is left-aligned flush under the display as one title block (same x 68), never centred or placed like a caption |
 | 2026-10-06 | No fixed text positions on footage; text goes where the shot has room |
 | 2026-10-06 | This file now lives in the design system's Export group and is updated in the same change as the system |
@@ -683,3 +764,7 @@ Work in `Claude/videos/<video>/`. **One go by default:** run every round below w
 | 2026-10-06 | Soft text glow added (light bloom + faint pink halation) on accent text only: titles, accent line, caption keyword, pill text, beat word, CTA keyword. Removed the old rules "no shadow on captions" and "no glow behind text" (Tetiana didn't set them) |
 | 2026-10-06 | Design system cut to colours, type and four signature elements Tetiana keeps as her branding: frosted glass pill, glow, blur dissolve, handle tag. Removed: the carousel kit (header and footer rows, bracket tags, icons, photo grid, slide templates), the voice-message pill with its waveform, the end card, the face card (L4) and card shadows; screenshots are shown plain |
 | 2026-10-06 | Audit fixes (v0.9): Hard rules added at the top; her footage is never moved or covered and no band, panel or box goes behind text; hook title optional, display 72–118px on footage; L3 only for real screen recordings and never a fallback; framing as shot; one-go edit; no white-balance matching; no ElevenLabs; visual-change and trigger counts became guidance; her own decisions come first in precedence |
+| 2026-10-06 | v1.0: one caption colour for the whole reel, never switched per shot (Tetiana: the white → black flip looked rough). Bright shots get the soft caption haze (her yes); a better contrast check uses the brightest pixels of the worst frame, not the average (section 1.6) |
+| 2026-10-06 | v1.0: captions in the first 3 s become the hook when there is no hook title (section 1.7); cover rules added (section 11.2); review loop added (section 17) |
+| 2026-10-06 | v1.0: accent line scales to 68% of the display; tutorials stay in L3 between steps; CTA is only the section 11 block; visual change about every 4–6 s everywhere; the Instagram grid crop is 3:4 (y 240–1680), not 4:5 |
+| 2026-10-06 | v1.0: the never lists merged into one Never section (14); version notes, pipeline recipes and reference tips moved out (Decisions log, Appendix A, `reference-sources.md`); L3 and L5 written in as the only exceptions to Hard rules 1 and 6 |

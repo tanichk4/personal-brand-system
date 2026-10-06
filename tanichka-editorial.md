@@ -25,7 +25,7 @@ Two themes share one set of names. Pick one theme per post, carousel or reel; ne
 | `accent-pink` | #F2A7C3 | #F2A7C3 | The one accent: the pill dot, the glow and the faint halo in the text glow. Never text, never a background or fill |
 
 - Photos and footage carry the colour.
-- No other colours, no coloured backgrounds, no neon. The only gradients are the glass fill, the two glows, the text glow and the dissolve tint (section 4).
+- No other colours, no coloured backgrounds, no neon. The only gradients and soft shadows are the glass fill, the two glows, the text glow, the text haze and the dissolve tint (section 4).
 - Switch a whole page or canvas to Ink with `data-theme="ink"`.
 
 ```css
@@ -49,6 +49,8 @@ Two themes share one set of names. Pick one theme per post, carousel or reel; ne
   --paper-clear: rgba(246, 245, 241, 0);
   --shadow-pill: 0 10px 26px rgba(17, 17, 17, 0.24);
   --text-glow: 0 0 6px rgba(255,255,255,0.35), 0 0 18px rgba(255,255,255,0.18), 0 0 40px rgba(242,167,195,0.14);
+  --text-haze-1: 0 0 14px rgba(17,17,17,0.4), 0 0 36px rgba(17,17,17,0.22);
+  --text-haze-2: 0 0 10px rgba(17,17,17,0.55), 0 0 28px rgba(17,17,17,0.35), 0 0 56px rgba(17,17,17,0.18);
 }
 [data-theme="ink"] {
   --paper: #151413;
@@ -72,7 +74,7 @@ Two free Google fonts (OFL), both with Cyrillic. Never Inter, Roboto or Arial, n
 | Role | Font | Size on a 1080-wide canvas | Notes |
 | --- | --- | --- | --- |
 | `display` | Onest 700, lh 0.98, ls -0.045em | 118px on paper (smaller on photos and video, to fit the space) | Left-aligned, max 2 lines. The only bold. Never centred |
-| `accent-line` | Playfair Display Italic 400, lh 1.1 | about 68% of the display | Optional last line of a title, flush left under it, 14px gap |
+| `accent-line` | Playfair Display Italic 400, lh 1.1 | 68% of the display, so it scales with it | Optional last line of a title, flush left under it, 14px gap |
 | `highlight` | Playfair Display Italic 400 | 115% of its sentence | One key word in a line, same colour. Brand names like Claude |
 | `body` | Onest 400, lh 1.75 | 40px | Short lines, never dense blocks |
 | `label` / `meta` | Onest 400 (500 for small text on photos) | 30–40px | Handles, small labels, page numbers |
@@ -111,12 +113,21 @@ A very soft, slightly wet-looking light around accent text, so it doesn't feel f
 - On ink text over paper: only the faint pink halo, `0 0 24px rgba(242,167,195,0.22)`.
 - It must stay subtle: the letters stay sharp, and the haze is barely visible on a phone.
 
+### Text haze (for reading, not a signature)
+
+When white text sits on a bright photo or video, it keeps its colour and gets a soft dark haze behind the letters instead: a wide blur with no offset and no edges, never a box or a band. Text never switches colour to fit one picture.
+
+- `text-haze-1` (a little help) and `text-haze-2` (bright spots). For ink text on a dark picture, use the same values in `paper` colour.
+- You must not be able to see where it ends. If you can, it is too strong.
+- The video rules decide when to use it (`reel-stylebook.md` section 1.6).
+
 ### Blur dissolve
 
 A blur that melts upward from the bottom of one photo, as if it dissolves into the paper. Also the soft blur transition between video sections.
 
 - Bottom 45% of the photo: 16px backdrop blur plus a faint paper tint (`paper-tint` → `paper-clear`), masked `linear-gradient(to top, #000 35%, transparent)`.
 - One photo only; counts as the glass element, so never alongside a frosted pill.
+- On video it is only the transition between sections, never a blurred strip left over the footage.
 
 ### Handle tag
 
@@ -147,6 +158,7 @@ A blur that melts upward from the bottom of one photo, as if it dissolves into t
 .te-glow { position: absolute; pointer-events: none; aspect-ratio: 1; transform: translate(-50%, -50%); background: var(--glow-soft); width: 918px; }
 .te-glow--strong { background: var(--glow-strong); width: 540px; }
 .te-text-glow { text-shadow: var(--text-glow); } /* accent text only: titles, accent line, keyword, pill text */
+.te-text-haze { text-shadow: var(--text-haze-1); } /* readability on bright pictures; --text-haze-2 for the brightest */
 .te-dissolve {
   position: absolute; left: 0; right: 0; bottom: 0; height: 45%; pointer-events: none;
   background: var(--dissolve-tint);
