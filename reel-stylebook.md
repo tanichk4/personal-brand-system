@@ -1,6 +1,6 @@
 # Reel Stylebook: @tanii444.ka
 
-Version 0.9 (2026-10-06: audit fixes. Her footage is never moved or covered to make room for text, and no band, panel or box ever goes behind text (section 3.3); hook title optional and sized to the shot; split screen only for real screen recordings; one-go edit, no colour matching, no ElevenLabs; pacing counts softened. The design system is now colours and type only, so the end card, voice pill, glow, icons, face card and card shadows are gone; screenshots are shown plain. The frosted and status pills are kept and fully defined here). Version 0.8 (2026-10-06: no fixed text positions on footage; text goes where each shot has room, section 3.3). Version 0.7 (2026-10-06: the accent line is left-aligned flush under the display as one title block, never centred or placed like a caption). Version 0.6 (2026-10-06: the design system gained a dark Ink theme; paper layouts can use it, one theme per reel). Version 0.5 (2026-10-06: synced with the current Tanichka Editorial design system: no polaroids, frames or tape (screenshots are plain photo cards), no heart icon, no tilted text). Version 0.4 (2026-10-05: text sizes +20%, no automatic caption pills, no colour grade, after Tetiana's review of IMG_6777). Built from the **Tanichka Editorial** design system, Tetiana's video editing rules, and a frame-by-frame study of her reference reel.
+Version 0.9 (2026-10-06: audit fixes. Her footage is never moved or covered to make room for text, and no band, panel or box ever goes behind text (section 3.3); hook title optional and sized to the shot; split screen only for real screen recordings; one-go edit, no colour matching, no ElevenLabs; pacing counts softened. The design system is now colours, type and four signature elements (frosted glass pill, glow, blur dissolve, handle tag); the carousel kit, voice pill, end card, icons, face card and card shadows are gone, and screenshots are shown plain). Version 0.8 (2026-10-06: no fixed text positions on footage; text goes where each shot has room, section 3.3). Version 0.7 (2026-10-06: the accent line is left-aligned flush under the display as one title block, never centred or placed like a caption). Version 0.6 (2026-10-06: the design system gained a dark Ink theme; paper layouts can use it, one theme per reel). Version 0.5 (2026-10-06: synced with the current Tanichka Editorial design system: no polaroids, frames or tape (screenshots are plain photo cards), no heart icon, no tilted text). Version 0.4 (2026-10-05: text sizes +20%, no automatic caption pills, no colour grade, after Tetiana's review of IMG_6777). Built from the **Tanichka Editorial** design system, Tetiana's video editing rules, and a frame-by-frame study of her reference reel.
 
 **Where this file lives:** written inside the Tanichka Editorial design system (Export group, `assets/Export/reel-stylebook.md`) and published to the GitHub repo `tanichk4/personal-brand-system`. Change it in the design system first, then export, or the next export overwrites the change. Whenever the design system changes, this file is updated in the same change so the two never disagree.
 
@@ -8,7 +8,7 @@ Version 0.9 (2026-10-06: audit fixes. Her footage is never moved or covered to m
 
 **Precedence when rules conflict:** 1) Tetiana's own decisions (what she says in the chat or in her CLAUDE.md), 2) Tanichka Editorial design system, 3) this file, 4) the reference reel. The older test edit's style (Manrope, Cormorant, mint #9BE7B0) is retired. Never use it.
 
-**Markers:** `⚑ ASSUMPTION` means a reasonable default that Tetiana hasn't confirmed yet. `+ NEW` means a video-only element the design system doesn't define. The design system now holds only colours and type; every video element (pills, screenshots, layouts) is defined in this file.
+**Markers:** `⚑ ASSUMPTION` means a reasonable default that Tetiana hasn't confirmed yet. `+ NEW` means a video-only element the design system doesn't define. The design system holds colours, type and the four signature elements; video-only elements (status pill, screenshots, layouts) are defined here.
 
 **Rules and defaults.** The short list under "Hard rules" below is always true. Everything else in this file is a good default: bend it when a shot needs it, and say what you bent in the edit notes. Numbers are starting points, not quotas; never add something to the screen only to hit a count.
 
@@ -38,11 +38,11 @@ Version 0.9 (2026-10-06: audit fixes. Her footage is never moved or covered to m
 | Caption position | Placed per shot by section 3.3. Max width 760px. Fixed for the whole shot, moves only on a cut |
 | Keyword | Playfair Display Italic 400 at 115% (67px), same colour as the caption. Max 1 per chunk, 1 per 6 s |
 | Hook title | **Optional**, only when the shot has room. Onest 700, 72–118px on footage (sized to the room, 118px on paper), lh 0.98, ls -0.045em, left-aligned at the 68px side margin, never centred; height chosen per shot (section 3.3). Accent line Playfair Italic 80px, flush left 14px under the display, straight (never rotated) |
-| Colours | paper #F6F5F1 · ink #111111 · muted #6E6A64 · white #FFFFFF (text on footage and glass) · accent-pink #F2A7C3 (dots and waveform only) |
+| Colours | paper #F6F5F1 · ink #111111 · muted #6E6A64 · white #FFFFFF (text on footage and glass) · accent-pink #F2A7C3 (pill dots and the glow only) |
 | Zoom | Cut-zoom steps 100% ↔ 110%. Max 2 steps per 10 s, min 3.0 s apart. Slow push 100→103% inside a shot |
 | Transitions | Hard cut inside a thought. Blur dissolve 240 ms for a new section. Blur dissolve 320 ms for a layout change |
 | Easing | Entrances `cubic-bezier(0.22, 1, 0.36, 1)`, exits `cubic-bezier(0.4, 0, 1, 1)`. No springs that overshoot, no bounce |
-| Restraint | Max 1 pill on screen at once. Max 2 graphics plus the caption at once |
+| Restraint | Max 1 glass element (pill or blur) and 1 glow on screen at once. Max 2 graphics plus the caption at once |
 | Status pill | Frosted pill with a pulsing pink dot and animated dots ("Claude думає…") while something is in progress, then a soft Pop In of the result (section 6.5) |
 | Pauses | Trim any pause over 400 ms down to 200 ms. Keep the last good take |
 | Visual change | About every 4–6 s, mostly from cut-zooms; a strong still shot can hold longer. Never add a graphic just to change something |
@@ -142,11 +142,12 @@ Every value comes from the design system tokens.
 | Text, icons and lines on paper | #111111 (Ink theme: #F3F1EC) | `ink` | |
 | Secondary notes on paper (e.g. "source:") | #6E6A64 | `muted` | Captions/secondary only |
 | Dot in pills, waveform bars | #F2A7C3 | `accent-pink` | The one accent; never text, never a fill |
-| Frosted pill fill + NEW | linear 180°: rgba(34,34,36,0.52) → rgba(14,14,16,0.60) | (video only) | Smoky see-through glass |
-| Frosted pill rim + NEW | 1px, rgba(255,255,255,0.30) at corners → rgba(255,255,255,0.10) on long sides | (video only) | |
-| Section / layout dissolve tint | paper #F6F5F1 at 30% → 0 | `paper` at opacity | The dissolve's tint |
+| Frosted pill fill | linear 180°: rgba(34,34,36,0.52) → rgba(14,14,16,0.60) | `glass-dark-*` | Smoky see-through glass |
+| Frosted pill rim | 1px, rgba(255,255,255,0.30) at corners → rgba(255,255,255,0.10) on long sides | `glass-border*` | |
+| Glow | radial, #F2A7C3B3 → transparent at 68%, about 540px wide | `glow-strong` | One soft pink glow behind the focal point |
+| Section / layout dissolve tint | rgba(246,245,241,0.30) → 0 | `paper-tint` → `paper-clear` | The blur dissolve's tint |
 
-Not allowed: any other colour, coloured backgrounds, pink text, mint, neon, any gradient other than the pill fill and the dissolve tint above.
+Not allowed: any other colour, coloured backgrounds, pink text, mint, neon, any gradient other than the pill fill, the glow and the dissolve tint above.
 
 ---
 
@@ -270,12 +271,13 @@ Named animations. CapCut equivalents are given only as the closest feel; the nam
 | Step number | `[2]` in `meta` | L3 paper half, top left | 1 |
 | Handle tag | `@tanii444.ka` in `meta`, #FFFFFF on footage / #111111 on paper | On footage: by section 3.3, in any calm area; Shown 0.6–3.0 s in the hook only | 1 |
 | Screenshot | Shown plain: sharp corners, no frame, no shadow, never tilted | By section 3.3 (L2 in section 3.2 is an example) | 1 on screen (2 only as a before/after pair, side by side with a 14px gap) |
-| Frosted pill | Section 6.4 | On footage only, by section 3.3: its own calm area near what it describes, never touching the caption | 1 pill on screen |
-| Status pill | Section 6.5 | By section 3.3: a calm area with room below or beside it for the result | 1; counts as the one pill |
+| Frosted pill | Section 6.4 | On footage only, by section 3.3: its own calm area near what it describes, never touching the caption | 1 glass element per screen |
+| Glow | `glow-strong` (section 2), soft pink, behind one focal point: the CTA keyword or the payoff result | Centred on what it lights, never on her face | 1 at a time, max 2 per reel |
+| Status pill | Section 6.5 | By section 3.3: a calm area with room below or beside it for the result | 1; counts as the glass element |
 
 ### 6.2 Not allowed
 
-Bands, bars, strips, panels or paper areas added behind text on footage, full-width progress or timeline bars across the video, emoji, stickers, hearts, arrows that point at things, circles around things, filled or 3D icons, polaroids, photo frames, tape strips, tilted or rotated text or cards, rounded cards, borders, boxes, shadowed cards, face cards in a corner, end cards with voice pills or glows, outline icons, drop shadows (except under a pill), subscribe/like animations, logo bugs, countdown timers. Progress is shown only inside the status pill (6.5) or with the step number `[1]`, `[2]`, `[3]`.
+Bands, bars, strips, panels or paper areas added behind text on footage, full-width progress or timeline bars across the video, emoji, stickers, hearts, arrows that point at things, circles around things, filled or 3D icons, polaroids, photo frames, tape strips, tilted or rotated text or cards, rounded cards, borders, boxes, shadowed cards, face cards in a corner, voice-message pills with a waveform, end cards, outline icons, bracket tags, drop shadows (except under a pill), subscribe/like animations, logo bugs, countdown timers. Progress is shown only inside the status pill (6.5) or with the step number `[1]`, `[2]`, `[3]`.
 
 ### 6.3 Screen recordings
 
@@ -287,7 +289,7 @@ Bands, bars, strips, panels or paper areas added behind text on footage, full-wi
 
 ### 6.4 Frosted pill on video
 
-Defined here (video only): fill as in section 2, backdrop blur 24px + saturate 120%, fully rounded, 1px gradient rim (section 2), inner top highlight rgba(255,255,255,0.16), shadow 0 10px 26px rgba(17,17,17,0.24), pink dot 0.32em with its glow. Proportions in em: height ≈ 2.8em, padding 0.9em 1.55em 0.9em 0.95em, gap 0.72em.
+Design system frosted glass pill: fill `glass-dark` (section 2), backdrop blur 24px + saturate 120%, fully rounded, 1px gradient rim, inner top highlight, `shadow-pill` (0 10px 26px rgba(17,17,17,0.24)), pink dot 0.32em with its glow. Proportions in em: height ≈ 2.8em, padding 0.9em 1.55em 0.9em 0.95em, gap 0.72em.
 
 | Use | Text size | Content |
 | --- | --- | --- |
@@ -296,7 +298,7 @@ Defined here (video only): fill as in section 2, backdrop blur 24px + saturate 1
 
 ### 6.5 Status pill + NEW
 
-The "work in progress" pill from the earlier test edit, which Tetiana liked, rebuilt in the brand colours. Use it whenever something is happening that the viewer waits for: Claude thinking, an app generating, a render, an upload, a search.
+The "work in progress" pill from the earlier test edit, which Tetiana liked, built on the design system's frosted glass pill. Use it whenever something is happening that the viewer waits for: Claude thinking, an app generating, a render, an upload, a search.
 
 | Part | Spec |
 | --- | --- |
@@ -394,7 +396,7 @@ Retention devices, all built from the motion and graphics in this file. A menu, 
 | Progress signal | Step index `[1]` → `[2]` → `[3]` in tutorials, or the status pill's progress line | Tutorials, processes | — |
 | Re-hook | A section title with a new promise ("а тепер найцікавіше", "the best part") + whoosh, at 40–55% of the reel | Middle | 1 |
 | Contrast | L5 beat moment: black and white + one big Playfair word | The surprising line | 1 |
-| Payoff | Result Pop In + `ding-soft`, held 2.0–3.0 s, captions hidden | Last third | 1–2 |
+| Payoff | Result Pop In + `ding-soft`, optionally with the glow behind it, held 2.0–3.0 s, captions hidden | Last third | 1–2 |
 | Direct address | Cut to 110% framing on lines that say "ти / you" | When she addresses the viewer | — |
 | Loop | Last line flows into the hook, framing matches (section 11) | End | 1 |
 
@@ -552,7 +554,7 @@ When sending a reference, a 3–10 s screen recording plus one line ("I like how
 | Footage framed as she shot it; text adapts to the shot | Moving, shrinking or reframing her to fit text; paper split without a screen recording |
 | Everything straight: titles, accent lines, cards | Tilted or rotated text or cards |
 | Cut-zoom on jump cuts, 100% ↔ 110% | Whip zooms, shakes, spins, glitch, RGB split, flash frames |
-| One pill at a time, only when it helps | Pills, glass or glows on every screen |
+| One glass element and one glow at a time, only when they help | Glass and glow on every screen |
 | Screenshots shown plain (sharp corners, no frame, no shadow) | Device mockups, polaroids, postcard-style cards, tape, white frames, rounded cards, shadows, face cards, floating 3D icons |
 | Soft pop, click and whoosh mapped to events | A sound on every word or zoom; music baked into the file |
 | Status pill while something is in progress, then the result pops in | Loading spinners, full-width progress bars, countdowns |
@@ -627,7 +629,7 @@ Work in `Claude/videos/<video>/`. **One go by default:** run every round below w
 ### Round 4: full edit
 
 - [ ] Apply everything to the whole reel: screenshots, pills, status pills, beat moment, CTA, SFX, room tone (sections 3–11). No music.
-- [ ] QA: her face is where it was in the raw clip and no band, bar, panel or box was added behind text; fonts loaded (no fallback), captions never under 800 ms, caption position and colour fixed per shot with contrast ≥ 4.5:1, no text on her face, hands or busy detail, max 1 pill on screen, nothing tilted, no text in unsafe bands, max 2 zooms / 10 s, no stretch over about 6 s that feels stuck, -14 LUFS / -1 dBTP, no black first frame, loop point checked.
+- [ ] QA: her face is where it was in the raw clip and no band, bar, panel or box was added behind text; fonts loaded (no fallback), captions never under 800 ms, caption position and colour fixed per shot with contrast ≥ 4.5:1, no text on her face, hands or busy detail, max 1 glass + 1 glow on screen, nothing tilted, no text in unsafe bands, max 2 zooms / 10 s, no stretch over about 6 s that feels stuck, -14 LUFS / -1 dBTP, no black first frame, loop point checked.
 - [ ] Export 1080×1920, 30 fps, H.264 High, 16–20 Mbps, AAC 48 kHz 320 kbps → `<video>_final.mp4`; plus a cover frame `<video>_cover.png` (1080×1920, hook title visible, key content inside the centre 1080×1440).
 
 ---
@@ -651,5 +653,5 @@ Work in `Claude/videos/<video>/`. **One go by default:** run every round below w
 | 2026-10-06 | Accent line is left-aligned flush under the display as one title block (same x 68), never centred or placed like a caption |
 | 2026-10-06 | No fixed text positions on footage; text goes where the shot has room |
 | 2026-10-06 | This file now lives in the design system's Export group and is updated in the same change as the system |
-| 2026-10-06 | Design system cut down to colours and type only, at Tetiana's request. Removed from reels: end card (voice pill, glow, paper CTA), outline icons, face card (L4), card shadows; screenshots are shown plain. Kept and defined here: frosted pill and status pill |
+| 2026-10-06 | Design system cut to colours, type and four signature elements Tetiana keeps as her branding: frosted glass pill, glow, blur dissolve, handle tag. Removed: the carousel kit (header and footer rows, bracket tags, icons, photo grid, slide templates), the voice-message pill with its waveform, the end card, the face card (L4) and card shadows; screenshots are shown plain |
 | 2026-10-06 | Audit fixes (v0.9): Hard rules added at the top; her footage is never moved or covered and no band, panel or box goes behind text; hook title optional, display 72–118px on footage; L3 only for real screen recordings and never a fallback; framing as shot; one-go edit; no white-balance matching; no ElevenLabs; visual-change and trigger counts became guidance; her own decisions come first in precedence |
