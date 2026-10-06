@@ -615,10 +615,6 @@ Measured: one continuous talking-head setup, hard jump cuts with framing alterna
 
 Keep: soft blur dissolves, gentle zoom steps, frosted pills, the "Claude думає…" status pill with its pulsing dot and animated dots (Tetiana's favourite, now section 6.5 with a pink dot), one accent, restraint. Drop: Manrope, Cormorant Garamond, mint #9BE7B0, uppercase labels, dark bottom gradient, word-by-word light-up, the warm grade.
 
-### 13.3 Where to find more references
-
-Tips for finding new motion references are in `reference-sources.md` in this repo. They are for Tetiana, not rules for the editor.
-
 ---
 
 ## 14. Never
@@ -705,12 +701,12 @@ Work in `Claude/videos/<video>/`. **One go by default:** run every round below w
 
 ## 17. Review loop
 
-The rules get better from real numbers, not guesses. Results live in `reel-log.md` in this repo.
+The rules get better from real numbers, not guesses.
 
 | When | What |
 | --- | --- |
-| 3–7 days after a reel is posted | Tetiana sends a screenshot of the reel's insights (views, average watch time, the retention graph, skip rate or 3-second hold, shares, saves, comments with the keyword). Claude adds one row to `reel-log.md`: date, reel, type, hook formula, length, the numbers, and where the retention graph drops (time and what was on screen then) |
-| Every 5 reels | Claude compares the rows: which hooks, lengths, layouts and first-3-second captions kept people longest, and where they leave. It proposes at most 2 rule changes, each with the numbers behind it |
+| 3–7 days after a reel is posted | Tetiana sends a screenshot of the reel's insights (views, average watch time, the retention graph, skip rate or 3-second hold, shares, saves, comments with the keyword). Claude notes the date, reel, type, hook formula, length, the numbers, and where the retention graph drops (time and what was on screen then) |
+| Every 5 reels | Claude compares the notes: which hooks, lengths, layouts and first-3-second captions kept people longest, and where they leave. It proposes at most 2 rule changes, each with the numbers behind it |
 | A change | Only after Tetiana says yes. It goes into this file and the Decisions log with the reason (e.g. "formula 3 held twice as long in 4 of 5 reels") |
 
 - Never change a rule because of one reel. Change one or two things at a time, so the next reels show what worked.
@@ -767,6 +763,6 @@ Tool commands the rules above refer to. They also live in `make-reel.sh` and `ki
 | 2026-10-06 | v1.0: one caption colour for the whole reel, never switched per shot (Tetiana: the white → black flip looked rough). Bright shots get the soft caption haze (her yes); a better contrast check uses the brightest pixels of the worst frame, not the average (section 1.6) |
 | 2026-10-06 | v1.0: captions in the first 3 s become the hook when there is no hook title (section 1.7); cover rules added (section 11.2); review loop added (section 17) |
 | 2026-10-06 | v1.0: accent line scales to 68% of the display; tutorials stay in L3 between steps; CTA is only the section 11 block; visual change about every 4–6 s everywhere; the Instagram grid crop is 3:4 (y 240–1680), not 4:5 |
-| 2026-10-06 | v1.0: the never lists merged into one Never section (14); version notes, pipeline recipes and reference tips moved out (Decisions log, Appendix A, `reference-sources.md`); L3 and L5 written in as the only exceptions to Hard rules 1 and 6 |
+| 2026-10-06 | v1.0: the never lists merged into one Never section (14); version notes and pipeline recipes moved out (Decisions log, Appendix A), reference tips removed; L3 and L5 written in as the only exceptions to Hard rules 1 and 6 |
 | 2026-10-06 | Inter replaces Onest everywhere (Tetiana's decision); Playfair Display Italic stays for accents. Same sizes and weights for now; check caption widths on the first reel |
 | 2026-10-06 | The GitHub repo is now the design system's only source; Tetiana no longer exports from a separate design file |
