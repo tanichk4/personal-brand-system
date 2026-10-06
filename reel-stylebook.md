@@ -275,7 +275,7 @@ Named animations. CapCut equivalents are given only as the closest feel; the nam
 
 ### 6.2 Not allowed
 
-Bands, bars, strips, panels or paper areas added behind text on footage, full-width progress or timeline bars across the video, emoji, stickers, hearts, arrows that point at things, circles around things, filled or 3D icons, polaroids, photo frames, tape strips, tilted or rotated text or cards, rounded cards, borders, boxes, polaroids-style or shadowed cards, face cards in a corner, end cards with voice pills or glows, outline icons, drop shadows (except under a pill), subscribe/like animations, logo bugs, countdown timers. Progress is shown only inside the status pill (6.5) or with the BracketTag step index `[1]`, `[2]`, `[3]`.
+Bands, bars, strips, panels or paper areas added behind text on footage, full-width progress or timeline bars across the video, emoji, stickers, hearts, arrows that point at things, circles around things, filled or 3D icons, polaroids, photo frames, tape strips, tilted or rotated text or cards, rounded cards, borders, boxes, shadowed cards, face cards in a corner, end cards with voice pills or glows, outline icons, drop shadows (except under a pill), subscribe/like animations, logo bugs, countdown timers. Progress is shown only inside the status pill (6.5) or with the step number `[1]`, `[2]`, `[3]`.
 
 ### 6.3 Screen recordings
 
