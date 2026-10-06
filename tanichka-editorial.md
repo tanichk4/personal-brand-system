@@ -4,7 +4,7 @@ Brand basics for @tanii444.ka: colours, type and five signature elements (froste
 
 Last updated: 2026-10-06
 
-This file has no carousel kit on purpose: no templates, header or footer rows, bracket tags, icons, photo cards or voice pill. Each format decides its own layout. The video rules live in `reel-stylebook.md`, built on these colours and fonts. Both files are exported from the design system: change them there first, then export.
+This file has no carousel kit on purpose: no templates, header or footer rows, bracket tags, icons, photo cards or voice pill. Each format decides its own layout. The video rules live in `reel-stylebook.md`, built on these colours and fonts. These two files in this GitHub repo are the design system: change them here.
 
 ## 1. Feel
 

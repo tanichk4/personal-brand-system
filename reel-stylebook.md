@@ -2,7 +2,7 @@
 
 Version 1.0 (2026-10-06). What changed and why: see the Decisions log at the end. Built from the **Tanichka Editorial** design system, Tetiana's video editing rules, and a frame-by-frame study of her reference reel.
 
-**Where this file lives:** written inside the Tanichka Editorial design system (Export group, `assets/Export/reel-stylebook.md`) and published to the GitHub repo `tanichk4/personal-brand-system`. Change it in the design system first, then export, or the next export overwrites the change. Whenever the design system changes, this file is updated in the same change so the two never disagree.
+**Where this file lives:** the GitHub repo `tanichk4/personal-brand-system` is the source of truth. Change it here; there is no other design file to export from. When `tanichka-editorial.md` changes, this file is updated in the same change so the two never disagree.
 
 **Who reads this:** an AI editor (Claude Code with Whisper, ffmpeg and Remotion) cutting raw iPhone footage into finished vertical reels for Instagram Reels, TikTok, Stories and LinkedIn.
 
@@ -769,3 +769,4 @@ Tool commands the rules above refer to. They also live in `make-reel.sh` and `ki
 | 2026-10-06 | v1.0: accent line scales to 68% of the display; tutorials stay in L3 between steps; CTA is only the section 11 block; visual change about every 4–6 s everywhere; the Instagram grid crop is 3:4 (y 240–1680), not 4:5 |
 | 2026-10-06 | v1.0: the never lists merged into one Never section (14); version notes, pipeline recipes and reference tips moved out (Decisions log, Appendix A, `reference-sources.md`); L3 and L5 written in as the only exceptions to Hard rules 1 and 6 |
 | 2026-10-06 | Inter replaces Onest everywhere (Tetiana's decision); Playfair Display Italic stays for accents. Same sizes and weights for now; check caption widths on the first reel |
+| 2026-10-06 | The GitHub repo is now the design system's only source; Tetiana no longer exports from a separate design file |
