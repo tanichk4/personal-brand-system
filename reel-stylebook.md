@@ -18,7 +18,7 @@ Version 1.0 (2026-10-06). What changed and why: see the Decisions log at the end
 2. **Never add a band, bar, strip, panel, paper area, scrim or box behind or around text on footage.** Text sits straight on the picture, or it isn't shown. (The soft text glow, the caption haze and the pink glow are not bands: they are allowed, sections 1.6 and 2.)
 3. If text doesn't fit, in this order: make it smaller (down to the minimum sizes in section 1.1), use fewer words or drop the accent line, put it in another calm area (the lower part of the frame included), or leave it out. Captions alone are a finished reel; a title can live on the cover instead.
 4. Never on her face or hands. Never in the platform safe zones (section 3.1).
-5. Onest and Playfair Display Italic only. Only the colours in section 2. Nothing tilted. Nothing from the Never list (section 14).
+5. Inter and Playfair Display Italic only. Only the colours in section 2. Nothing tilted. Nothing from the Never list (section 14).
 6. No colour grade and no colour matching; only the HDR → SDR conversion (section 12). The one exception: the black-and-white beat moment (L5), max 1 per reel.
 7. No music in the file. Sound effects only from the approved kit (section 7).
 8. One-go edit: deliver the finished reel without stopping between rounds, unless Tetiana asks for a stop (section 16).
@@ -32,14 +32,14 @@ Version 1.0 (2026-10-06). What changed and why: see the Decisions log at the end
 | --- | --- |
 | ★ Safe zones | Margins top 250 · bottom 480 · left 68 · right 68 (160 from y 900 down): the stricter of Reels and TikTok. Every overlay stays inside (section 3.1) |
 | Canvas | 1080×1920, 30 fps, H.264 High, yuv420p, Rec.709 SDR, 16–20 Mbps, AAC 48 kHz 320 kbps |
-| ★ Fonts | Onest (400 / 500 / 700) and Playfair Display Italic 400. Nothing else, no fallbacks to Inter, Roboto or Arial |
-| Captions | Onest 500, **58px**, lowercase, centred, **phrase chunks of 2–4 words, max 24 characters, 1 line** |
+| ★ Fonts | Inter (400 / 500 / 700) and Playfair Display Italic 400. Nothing else, no fallbacks to Roboto or Arial |
+| Captions | Inter 500, **58px**, lowercase, centred, **phrase chunks of 2–4 words, max 24 characters, 1 line** |
 | ★ Caption colour | **One colour for the whole reel**, white #FFFFFF by default (porcelain #F6F5F1 or ink #111111 only if they suit every shot). Never changes mid-reel. Bright shots get the soft caption haze (section 1.6) |
 | Caption timing | Min 800 ms on screen, target 1000–1600 ms, max 2400 ms. Soft Focus entrance (140 ms). With no hook title, captions start on frame 0 (section 1.7) |
 | Text placement | **No fixed positions on footage.** Each shot, text and graphics go where the picture has room: the calmest empty area, never on her face or hands, never on busy detail (section 3.3). Platform safe zones always apply. The split layout keeps its grid |
 | Caption position | Placed per shot by section 3.3. Max width 760px. Fixed for the whole shot, moves only on a cut |
 | Keyword | Playfair Display Italic 400 at 115% (67px), same colour as the caption. Max 1 per chunk, 1 per 6 s |
-| Hook title | **Optional**, only when the shot has room. Onest 700, 72–118px on footage (sized to the room, 118px on paper), lh 0.98, ls -0.045em, left-aligned at the 68px side margin, never centred; height chosen per shot (section 3.3). Accent line Playfair Italic at 68% of the display (80px under a 118px display, 49px under 72px), flush left 14px under it, straight (never rotated) |
+| Hook title | **Optional**, only when the shot has room. Inter 700, 72–118px on footage (sized to the room, 118px on paper), lh 0.98, ls -0.045em, left-aligned at the 68px side margin, never centred; height chosen per shot (section 3.3). Accent line Playfair Italic at 68% of the display (80px under a 118px display, 49px under 72px), flush left 14px under it, straight (never rotated) |
 | ★ Colours | paper #F6F5F1 · ink #111111 · muted #6E6A64 · white #FFFFFF (text on footage and glass) · accent-pink #F2A7C3 (pill dots and the glow only) |
 | Zoom | Cut-zoom steps 100% ↔ 110%. Max 2 steps per 10 s, min 3.0 s apart. Slow push 100→103% inside a shot |
 | Transitions | Hard cut inside a thought. Blur dissolve 240 ms for a new section. Blur dissolve 320 ms for a layout change |
@@ -66,23 +66,23 @@ Nothing is ever rotated or tilted: no tilted titles, accent lines, keywords or c
 
 | Role | Font | Size | Weight | Line height | Letter spacing | Colour | Why |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| `reel-caption` | Onest | 58px (down to 48px only when a shot has no room) | 500 | 1.2 | -0.01em | One per reel: #FFFFFF, #F6F5F1 or #111111 (section 1.2) | Tetiana found 48px too small (2026-10-05) and asked for +20%; 500 is the heaviest weight the system allows outside the display |
+| `reel-caption` | Inter | 58px (down to 48px only when a shot has no room) | 500 | 1.2 | -0.01em | One per reel: #FFFFFF, #F6F5F1 or #111111 (section 1.2) | Tetiana found 48px too small (2026-10-05) and asked for +20%; 500 is the heaviest weight the system allows outside the display |
 | `reel-caption-keyword` | Playfair Display Italic | 67px (115%) | 400 | 1 | 0 | same as its caption | The system's `highlight` rule, applied to captions |
-| `display` (hook title, section title) | Onest | 118px on paper; 72–118px on footage, the largest that fits the shot's calm area | 700 | 0.98 | -0.045em | #FFFFFF on footage, #111111 on paper | The system's display; the only bold |
+| `display` (hook title, section title) | Inter | 118px on paper; 72–118px on footage, the largest that fits the shot's calm area | 700 | 0.98 | -0.045em | #FFFFFF on footage, #111111 on paper | The system's display; the only bold |
 | `accent-line` | Playfair Display Italic | 68% of the display (80px under 118px, 49px under 72px) | 400 | 1.1 | 0 | same as display | The title's last line: straight, left-aligned at x 68 under the display. Scales with the display so it is never bigger than the title |
 | `beat-word` | Playfair Display Italic | 160px | 400 | 1 | 0 | #FFFFFF | One-word punchline moment (L5, section 3.2). Built on the accent line, scaled up |
-| `section-label` | Onest | 48px | 400 | 1 | -0.01em | #FFFFFF on footage, #111111 on paper | Names the content below it |
-| `meta` | Onest | 36px | 400 | 1 | 0 | #FFFFFF on footage, #111111 / #6E6A64 on paper | Handle, step index, small CTA lead-in |
-| `pill` | Onest | 31px | 500 | 1 | -0.01em | #FFFFFF | Text inside a frosted pill or the status pill (+20% on the design system's 26px) |
+| `section-label` | Inter | 48px | 400 | 1 | -0.01em | #FFFFFF on footage, #111111 on paper | Names the content below it |
+| `meta` | Inter | 36px | 400 | 1 | 0 | #FFFFFF on footage, #111111 / #6E6A64 on paper | Handle, step index, small CTA lead-in |
+| `pill` | Inter | 31px | 500 | 1 | -0.01em | #FFFFFF | Text inside a frosted pill or the status pill (+20% on the design system's 26px) |
 
-Load in Remotion with `@remotion/google-fonts/Onest` (weights 400, 500, 700) and `@remotion/google-fonts/PlayfairDisplay` (italic 400, subsets `latin`, `cyrillic`). Block the render until both are loaded (`delayRender`).
+Load in Remotion with `@remotion/google-fonts/Inter` (weights 400, 500, 700, subsets `latin`, `cyrillic`) and `@remotion/google-fonts/PlayfairDisplay` (italic 400, subsets `latin`, `cyrillic`). Block the render until both are loaded (`delayRender`).
 
 ### 1.2 Captions
 
 | Rule | Value | Why |
 | --- | --- | --- |
 | Words on screen | 2–4 words per chunk; a single word only if it is ≥ 10 characters or the whole sentence | Tetiana wants phrase captions, not word-by-word |
-| Characters | Max 24 per chunk, including spaces | Keeps one line inside the 760px width at 58px (measured: typical 24-char Ukrainian lines are 670–730px) |
+| Characters | Max 24 per chunk, including spaces | Keeps one line inside the 760px width at 58px (measured with Onest: typical 24-char Ukrainian lines are 670–730px; re-check with Inter on the first reel) |
 | Lines | 1 line. Never 2 | Keeps the caption a light ribbon, like the reference |
 | Line breaks / chunking | Break at meaning: after a comma, before a conjunction (і, а, але, що, бо, and, but, so, that), before a preposition phrase. Never split a number from its unit, a name from its surname, a preposition from its noun | Reads as phrases you'd say in one breath |
 | Min on screen | 800 ms. If a chunk would be shorter, merge it with the next one (if ≤ 24 chars) or hold it into the next chunk's start | "A little bit slower" than the reference's 300 ms per word |
@@ -114,7 +114,7 @@ Load in Remotion with `@remotion/google-fonts/Onest` (weights 400, 500, 700) and
 
 | Rule | Value | Why |
 | --- | --- | --- |
-| Style | `display` (Onest 700, 72–118px on footage, 118px on paper) + optional `accent-line` (Playfair Italic at 68% of the display, straight), both with the soft text glow (section 2) | The system's Headline |
+| Style | `display` (Inter 700, 72–118px on footage, 118px on paper) + optional `accent-line` (Playfair Italic at 68% of the display, straight), both with the soft text glow (section 2) | The system's Headline |
 | Alignment | Left edge at the 68px side margin (x 68). Never centred | Design system: never centre the display |
 | When | Optional. Use it when a shot has a calm area big enough for it; otherwise skip it (the hook can be spoken, with captions) or put the title on the cover | A title must never force a band or a reframe |
 | Position | No fixed height. The whole block (display + accent line) goes in the calmest empty area of the shot that fits it at x 68 (section 3.3), upper or lower part of the frame; accent line 14px below the display, flush left at the same x 68. Keep it inside the middle 3:4 area the profile grid shows (y 240–1680) when possible | Text goes where the shot has room, inside the safe zones |
@@ -377,7 +377,7 @@ The "work in progress" pill from the earlier test edit, which Tetiana liked, bui
 | --- | --- |
 | Shell | Frosted pill (6.4): same fill, blur, rim and shadow, fully rounded, height 2.8em at 31px text (≈ 87px) |
 | Dot | `accent-pink` #F2A7C3, 0.32em, own glow, Status Pulse |
-| Text | `pill` style (Onest 500, 31px, #FFFFFF, soft text glow), lowercase except brand names, max 26 characters, then Thinking Dots. Examples: "Claude думає", "збирає дизайн", "шукає референси", "готово" |
+| Text | `pill` style (Inter 500, 31px, #FFFFFF, soft text glow), lowercase except brand names, max 26 characters, then Thinking Dots. Examples: "Claude думає", "збирає дизайн", "шукає референси", "готово" |
 | Progress line (optional) | 3px line inside the pill, 0.95em from the left, 1.55em from the right, 10px above the bottom edge; track rgba(255,255,255,0.18), fill rgba(255,255,255,0.85), radius 999px. Fills with `ease-move` across the whole status sequence, never resets |
 | Position | No fixed spot: placed by section 3.3 in a calm empty area of the shot; its pop-up result lands in the next calm area beside or below it, never over her face or hands |
 | Sequence | 1) Pill Rise as she starts the action ("я питаю Claude…"). 2) 1–3 status texts, each on screen ≥ 1200 ms, changed with Status Swap. 3) Status Done ("готово" + check) for 600 ms. 4) Pill Rise reversed (180 ms), and 80 ms later the result pops up with Pop In (a plain screenshot) |
@@ -557,7 +557,7 @@ The cover is what people see in the profile grid and when the reel is shared. It
 | Size | 1080×1920 PNG. Everything that matters inside the middle 1080×1440 (y 240–1680); face and title ideally inside the centre 1080×1080 | The Instagram grid crops reels to 3:4; other places crop tighter |
 | Frame | A real frame from the reel: her face clear, eyes open, a readable expression, mouth not mid-word, no motion blur. No grade, same colour as the reel | Faces get taps; a mid-word frame looks odd |
 | Title | 3–5 words: the hook promise, or a shorter version of the hook title. Lowercase, brand names excepted | It is read at thumbnail size in under a second |
-| Style | The title block: Onest 700 display + optional Playfair Italic accent line (68% of the display), left edge x 68, soft text glow, caption haze if the frame is bright | Same look as the reel, so the cover feels like part of it |
+| Style | The title block: Inter 700 display + optional Playfair Italic accent line (68% of the display), left edge x 68, soft text glow, caption haze if the frame is bright | Same look as the reel, so the cover feels like part of it |
 | Size of the title | As large as fits, at least 96px. If it doesn't fit, Hard rule 3 applies: smaller (not under 96px), fewer words, another calm area, or a different frame | Small or thin text disappears in the grid |
 | Placement | By section 3.3 on that frame: never on her face or hands, never a band or box | Same rules as the reel |
 | Consistency | Same layout, type and colour on every cover, so the profile grid reads as one set | A steady grid tells new visitors this is a real brand |
@@ -593,7 +593,7 @@ Measured: one continuous talking-head setup, hard jump cuts with framing alterna
 | --- | --- | --- |
 | Small, quiet captions low in the frame | One line, white, medium-weight sans, ≈ 48px at y ≈ 1340, no box | **Slower:** 2–4 word chunks, min 800 ms instead of single words at 300 ms; and placed where each shot has room, not at a fixed height |
 | Captions soften into focus | Each word fades in over ~3 frames with a slight blur and scale-up | Same feel as Soft Focus In (140 ms), applied per chunk |
-| Mixed-font titles | Sans title lines with one word in a serif italic ("*Claude* може робити", "*закономірності*") | Onest 700 display + Playfair Italic accent line, left-aligned and straight (the reference centres them; our system forbids centred display and tilted text) |
+| Mixed-font titles | Sans title lines with one word in a serif italic ("*Claude* може робити", "*закономірності*") | Inter 700 display + Playfair Italic accent line, left-aligned and straight (the reference centres them; our system forbids centred display and tilted text) |
 | Titles replace captions | When a title is on, captions disappear | Same rule (1.2) |
 | Title builds as she speaks | Words add one at a time | Line by line, not word by word |
 | Cut-zoom jump cuts | Alternating framing hides every jump cut | 100% / 110%, max 2 per 10 s |
@@ -627,12 +627,12 @@ One list for everything that stays out of a reel. The Hard rules at the top are 
 
 - **Her footage:** moving, shrinking, cropping or reframing her to fit text (only L3 crops her, for a real screen recording); text on her face or hands; any grade, LUT, teal-orange look, heavy contrast, beauty filter or white-balance matching (only L5 goes black and white).
 - **Behind text:** bands, bars, strips, panels, paper areas, scrims, boxes, outlines or strokes, hard drop shadows, automatic caption pills. Allowed: the soft caption haze, the text glow and the pink glow.
-- **Type:** fonts other than Onest and Playfair Display Italic (no Inter, Roboto or Arial, not even as fallback); ALL CAPS; underlines; centred display titles; more than 2 display lines; word-by-word or karaoke captions; bouncing words; pink, yellow or boxed keywords; a glow on every word; a caption colour that changes mid-reel.
+- **Type:** fonts other than Inter and Playfair Display Italic (no Roboto or Arial, not even as fallback); ALL CAPS; underlines; centred display titles; more than 2 display lines; word-by-word or karaoke captions; bouncing words; pink, yellow or boxed keywords; a glow on every word; a caption colour that changes mid-reel.
 - **Colour:** any colour outside section 2; coloured backgrounds; pure black; pink text or pink fills; mixing Paper and Ink in one reel.
 - **Graphics:** emoji, stickers, hearts, arrows that point at things, circles around things, icons of any kind, polaroids, photo frames, tape, white frames, rounded or shadowed cards (the pill's own shadow is fine), device mockups, face cards, voice-message pills with a waveform, end cards, bracket tags, logo bugs, subscribe or like animations, countdowns, loading spinners, full-width progress or timeline bars, blurred-video fill backgrounds.
 - **Motion:** tilted or rotated text or cards; whip zooms, shakes, spins, glitch, RGB split, flash frames; bounce or overshoot (except Pop In's 2%); more than 1 glass element and 1 glow on screen; visual changes under 1.5 s apart; more than 6 s that feels stuck.
 - **Sound:** music in the file; a sound on every word or zoom; meme sounds (list in 7.1); ElevenLabs or any paid sound service.
-- **Retired style:** Manrope, Cormorant Garamond, mint #9BE7B0 (the old test edit).
+- **Retired style:** Onest (replaced by Inter, 2026-10-06); Manrope, Cormorant Garamond, mint #9BE7B0 (the old test edit).
 
 ---
 
@@ -768,3 +768,4 @@ Tool commands the rules above refer to. They also live in `make-reel.sh` and `ki
 | 2026-10-06 | v1.0: captions in the first 3 s become the hook when there is no hook title (section 1.7); cover rules added (section 11.2); review loop added (section 17) |
 | 2026-10-06 | v1.0: accent line scales to 68% of the display; tutorials stay in L3 between steps; CTA is only the section 11 block; visual change about every 4–6 s everywhere; the Instagram grid crop is 3:4 (y 240–1680), not 4:5 |
 | 2026-10-06 | v1.0: the never lists merged into one Never section (14); version notes, pipeline recipes and reference tips moved out (Decisions log, Appendix A, `reference-sources.md`); L3 and L5 written in as the only exceptions to Hard rules 1 and 6 |
+| 2026-10-06 | Inter replaces Onest everywhere (Tetiana's decision); Playfair Display Italic stays for accents. Same sizes and weights for now; check caption widths on the first reel |

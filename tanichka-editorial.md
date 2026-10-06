@@ -67,17 +67,17 @@ Two themes share one set of names. Pick one theme per post, carousel or reel; ne
 
 ## 3. Type
 
-Two free Google fonts (OFL), both with Cyrillic. Never Inter, Roboto or Arial, not even as a fallback.
+Two free Google fonts (OFL), both with Cyrillic. Never Roboto or Arial, not even as a fallback. Inter replaced Onest on 2026-10-06.
 
-`https://fonts.googleapis.com/css2?family=Onest:wght@400;500;700&family=Playfair+Display:ital,wght@1,400&display=swap`
+`https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Playfair+Display:ital,wght@1,400&display=swap`
 
 | Role | Font | Size on a 1080-wide canvas | Notes |
 | --- | --- | --- | --- |
-| `display` | Onest 700, lh 0.98, ls -0.045em | 118px on paper (smaller on photos and video, to fit the space) | Left-aligned, max 2 lines. The only bold. Never centred |
+| `display` | Inter 700, lh 0.98, ls -0.045em | 118px on paper (smaller on photos and video, to fit the space) | Left-aligned, max 2 lines. The only bold. Never centred |
 | `accent-line` | Playfair Display Italic 400, lh 1.1 | 68% of the display, so it scales with it | Optional last line of a title, flush left under it, 14px gap |
 | `highlight` | Playfair Display Italic 400 | 115% of its sentence | One key word in a line, same colour. Brand names like Claude |
-| `body` | Onest 400, lh 1.75 | 40px | Short lines, never dense blocks |
-| `label` / `meta` | Onest 400 (500 for small text on photos) | 30–40px | Handles, small labels, page numbers |
+| `body` | Inter 400, lh 1.75 | 40px | Short lines, never dense blocks |
+| `label` / `meta` | Inter 400 (500 for small text on photos) | 30–40px | Handles, small labels, page numbers |
 
 - Everything sits straight: no tilted or rotated text.
 - Sizes scale with the canvas width. Other formats (9:16 story, square, 16:9) keep the same proportions.
@@ -92,7 +92,7 @@ A smoky, see-through glass pill on a photo or video, for one short fact or a sta
 
 - Fill: `glass-dark-top` → `glass-dark-bottom` (linear 180°), over a 24px backdrop blur + saturate 120%, so the picture behind melts into smooth colour. Fully rounded.
 - Rim: 1px, brightest at the top-left and bottom-right (`glass-border`), dimmer along the long sides (`glass-border-faint`). Inner top highlight `glass-highlight`, inner bottom edge `glass-lowlight`. Shadow `shadow-pill`.
-- Pink dot on the left (0.32em, own soft glow), then the text in Onest 500, `on-glass` white, 22–26px on a 1080 canvas (larger on video).
+- Pink dot on the left (0.32em, own soft glow), then the text in Inter 500, `on-glass` white, 22–26px on a 1080 canvas (larger on video).
 - Proportions in em of the text: height about 2.8em, padding 0.9em 1.55em 0.9em 0.95em, dot to text 0.72em.
 - Only on photos or video, never on paper. No fixed spot: the calmest empty area, never on a face or hands.
 
@@ -131,7 +131,7 @@ A blur that melts upward from the bottom of one photo, as if it dissolves into t
 
 ### Handle tag
 
-`@tanii444.ka` in Onest 400 (`meta`), lowercase, `ink` on paper or white on photos and video. Small and quiet, in a calm spot. It is the signature, not a logo bug.
+`@tanii444.ka` in Inter 400 (`meta`), lowercase, `ink` on paper or white on photos and video. Small and quiet, in a calm spot. It is the signature, not a logo bug.
 
 ```css
 :root {
@@ -142,7 +142,7 @@ A blur that melts upward from the bottom of one photo, as if it dissolves into t
 }
 .te-frost {
   position: relative; display: inline-flex; align-items: center; gap: 0.72em;
-  font: 500 24px/1 Onest, sans-serif; letter-spacing: -0.01em; color: var(--on-glass);
+  font: 500 24px/1 Inter, sans-serif; letter-spacing: -0.01em; color: var(--on-glass);
   padding: 0.9em 1.55em 0.9em 0.95em; border-radius: 999px; background: var(--glass-dark);
   -webkit-backdrop-filter: blur(24px) saturate(120%); backdrop-filter: blur(24px) saturate(120%);
   box-shadow: inset 0 1px 0 var(--glass-highlight), inset 0 -1px 0 var(--glass-lowlight), var(--shadow-pill);
