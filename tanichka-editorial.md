@@ -90,6 +90,7 @@ The base canvas is 1080×1350 (4:5). Every size scales proportionally with canva
 - Frosted glass (for pills over photos): a smoky, see-through `--glass-dark` fill over a soft backdrop blur (`blur-glass`, 24px + saturate 120%), so the photo behind melts into smooth colour. A thin 1px rim, brightest at the top-left and bottom-right (`glass-border`) and dimmer along the long sides (`glass-border-faint`), plus a faint inner top highlight (`glass-highlight`). Proportions are tied to the text size: height about 2.8× the text, generous padding, more on the right than the left.
 - Blur dissolve: on ONE photo, the bottom 45% gets a 16px backdrop blur and a faint paper tint (`paper-tint` → `paper-clear`), masked `linear-gradient(to top, #000 35%, transparent)` so the blur melts upward.
 - Glow: one large soft pink radial circle behind the single focal point. Use `--glow-soft` (about 85% of canvas width) behind a cover's focal photo, or `--glow-strong` (about 50%) behind the CTA. Never put a glow behind body text anywhere else.
+- Text and pills on a photo or on video have no fixed position: each goes where that picture has room, in the calmest empty area, never on a face, hands or busy detail. A display headline always keeps its left edge on the side margin; only its height changes. Paper areas keep their grid.
 - **Restraint rule:** at most one glass/frosted/blur element and one glow per slide or page. Most slides get none. The 3D touches are seasoning, never the dish.
 
 ### Components
@@ -309,7 +310,7 @@ Two rows of photos with deliberately uneven columns and rows, sharp corners, 14p
 
 A frosted glass pill that sits on a photo and states one key fact in 2–4 words.
 
-- Markup: `<span class="te-frost"><span class="te-dot"></span>6 категорій поз</span>`, placed as a child of a `.te-photo`: it centres itself near the photo's bottom edge.
+- Markup: `<span class="te-frost"><span class="te-dot"></span>6 категорій поз</span>`, placed as a child of a `.te-photo`. It has no fixed spot: put it where that photo has room, in the calmest empty area, never on a face, hands or busy detail. Move it with `--pill-x` (horizontal centre) and `--pill-y` (distance from the bottom); with neither set it sits bottom-centre.
 - Fill: smoky glass-dark (`glass-dark-top` → `glass-dark-bottom`), see-through, over a soft backdrop blur `blur-glass` (24px) + saturate 120%. Fully rounded (`radius-pill`), `shadow-pill`.
 - Rim: a thin 1px gradient line, brightest at the top-left and bottom-right (`glass-border`), dimmer along the long sides (`glass-border-faint`). Inner edges: `glass-highlight` on top, `glass-lowlight` at the bottom.
 - Proportions, all in em of the text so they hold at any size: height about 2.8em, padding 0.9em 1.55em 0.9em 0.95em, dot 0.32em, gap from dot to text 0.72em.
@@ -671,7 +672,8 @@ Component styles (`bundle.css`):
   -webkit-mask-composite: xor; mask-composite: exclude;
 }
 .te-frost .te-dot { width: 0.32em; height: 0.32em; box-shadow: 0 0 0.45em var(--accent-pink); }
-.te-photo > .te-frost { position: absolute; left: 50%; bottom: calc(28 * var(--u)); transform: translateX(-50%); }
+/* on a photo: no fixed spot. Default is bottom-centre; set --pill-x / --pill-y to put it in the calmest empty area of that photo */
+.te-photo > .te-frost { position: absolute; left: var(--pill-x, 50%); bottom: var(--pill-y, calc(28 * var(--u))); transform: translateX(-50%); }
 .te-dot {
   flex: none; width: calc(12 * var(--u)); height: calc(12 * var(--u)); border-radius: 50%;
   background: var(--accent-pink); box-shadow: 0 0 calc(10 * var(--u)) var(--accent-pink);

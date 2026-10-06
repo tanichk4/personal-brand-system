@@ -1,6 +1,6 @@
 # Reel Stylebook: @tanii444.ka
 
-Version 0.7 (2026-10-06: the accent line is left-aligned flush under the display as one title block, never centred or placed like a caption). Version 0.6 (2026-10-06: the design system gained a dark Ink theme; paper layouts can use it, one theme per reel). Version 0.5 (2026-10-06: synced with the current Tanichka Editorial design system: no polaroids, frames or tape (screenshots are plain photo cards), no heart icon, no tilted text). Version 0.4 (2026-10-05: text sizes +20%, no automatic caption pills, no colour grade, after Tetiana's review of IMG_6777). Built from the **Tanichka Editorial** design system, Tetiana's video editing rules, and a frame-by-frame study of her reference reel.
+Version 0.8 (2026-10-06: no fixed text positions on footage; text goes where each shot has room, section 3.3). Version 0.7 (2026-10-06: the accent line is left-aligned flush under the display as one title block, never centred or placed like a caption). Version 0.6 (2026-10-06: the design system gained a dark Ink theme; paper layouts can use it, one theme per reel). Version 0.5 (2026-10-06: synced with the current Tanichka Editorial design system: no polaroids, frames or tape (screenshots are plain photo cards), no heart icon, no tilted text). Version 0.4 (2026-10-05: text sizes +20%, no automatic caption pills, no colour grade, after Tetiana's review of IMG_6777). Built from the **Tanichka Editorial** design system, Tetiana's video editing rules, and a frame-by-frame study of her reference reel.
 
 **Where this file lives:** inside the Tanichka Editorial design system (Export group, `assets/Export/reel-stylebook.md`). Whenever the design system changes, this file is updated in the same change so the two never disagree.
 
@@ -21,9 +21,10 @@ Version 0.7 (2026-10-06: the accent line is left-aligned flush under the display
 | Captions | Onest 500, **58px**, lowercase, centred, **phrase chunks of 2–4 words, max 24 characters, 1 line** |
 | Caption colour | Picked per shot to suit the picture: white #FFFFFF, porcelain #F6F5F1 or ink #111111 (section 1.2) |
 | Caption timing | Min 800 ms on screen, target 1000–1600 ms, max 2400 ms. Soft Focus entrance (140 ms) |
-| Caption position | In the emptiest of 3 slots: y 1340 (default), y 1180, y 440. Max width 760px (x 160–920). Fixed for the whole shot |
+| Text placement | **No fixed positions on footage.** Each shot, text and graphics go where the picture has room: the calmest empty area, never on her face or hands, never on busy detail (section 3.3). Platform safe zones always apply. Paper layouts keep their grid |
+| Caption position | Placed per shot by section 3.3. Max width 760px. Fixed for the whole shot, moves only on a cut |
 | Keyword | Playfair Display Italic 400 at 115% (67px), same colour as the caption. Max 1 per chunk, 1 per 6 s |
-| Hook title | Onest 700, 118px, lh 0.98, ls -0.045em, left at x 68, top at y 320. Accent line Playfair Italic 80px, straight (never rotated) |
+| Hook title | Onest 700, 118px, lh 0.98, ls -0.045em, left-aligned at the 68px side margin, never centred; height chosen per shot (section 3.3). Accent line Playfair Italic 80px, flush left 14px under the display, straight (never rotated) |
 | Colours | paper #F6F5F1 · ink #111111 · muted #6E6A64 · white #FFFFFF (text on footage and glass) · accent-pink #F2A7C3 (dots and waveform only) |
 | Zoom | Cut-zoom steps 100% ↔ 110%. Max 2 steps per 10 s, min 3.0 s apart. Slow push 100→103% inside a shot |
 | Transitions | Hard cut inside a thought. Blur dissolve 240 ms for a new section. Blur dissolve 320 ms for a layout change |
@@ -73,16 +74,16 @@ Load in Remotion with `@remotion/google-fonts/Onest` (weights 400, 500, 700) and
 | Target on screen | 1000–1600 ms | About 3× the reference's dwell time |
 | Max on screen | 2400 ms; also clear the caption if a pause over 600 ms follows | Stale captions feel stuck |
 | Sync | Chunk appears 40 ms before its first word starts; next chunk replaces it directly (no empty gap) | Avoids flicker between chunks |
-| Position | Line centred at x 540, max width 760px, in one of 3 slots (vertical centre): **A y 1340** (default, the reference's spot), **B y 1180**, **C y 440**. Pick the first slot whose box (760×90px) is empty: no face, no hands in front of the body, no graphic, and low detail (edge density under 8% of pixels with a Sobel filter) | Captions sit on empty space, like Tetiana wants |
-| Slot stability | The slot is chosen once per shot (between two cuts) and never moves mid-shot. Slot C only when no title or card is on screen | Jumping captions look nervous |
+| Position | No fixed position. Placed per shot by section 3.3: the calmest empty area of that shot with room for a 760×90px box; the line is centred in that box | Captions sit on empty space, like Tetiana wants |
+| Position stability | The position is chosen once per shot (between two cuts) and never moves mid-shot; it may change only on a cut | Jumping captions look nervous |
 | Case | lowercase (brand names excepted); no full stop at the end of a chunk; keep ? and ! only | Design system: lowercase, friendly |
 | Language | Caption in the spoken language. English words inside Ukrainian speech stay in English spelling (e.g. "зробила це в Figma за 5 хвилин") | Tetiana's rule |
 | Numbers | Digits, not words: "5 хвилин", "3 tips" | Faster to read |
 | Filler words | Never captioned (they're cut anyway, section 8) | |
-| Colour | Measured once per shot on the chosen slot's box (mean of the frames): **ink #111111** if mean luminance > 62%; otherwise **porcelain #F6F5F1** if the picture is warm (mean Lab b* > +6, e.g. lamp light, skin, wood, beige) and **white #FFFFFF** if it is neutral or cool (b* ≤ +6, e.g. grey coat, daylight, screens, black and white). The chosen colour must reach a contrast of ≥ 4.5:1 against the box; if it doesn't, use whichever of the three colours does (e.g. ink on a mid-grey coat, 6.4:1, beats white at 3:1); if none does, try the next slot | Colour that matches the warmth and saturation of the picture, as Tetiana asked; only these 3 colours exist in the design system |
+| Colour | Measured once per shot on the chosen area's box (mean of the frames): **ink #111111** if mean luminance > 62%; otherwise **porcelain #F6F5F1** if the picture is warm (mean Lab b* > +6, e.g. lamp light, skin, wood, beige) and **white #FFFFFF** if it is neutral or cool (b* ≤ +6, e.g. grey coat, daylight, screens, black and white). The chosen colour must reach a contrast of ≥ 4.5:1 against the box; if it doesn't, use whichever of the three colours does (e.g. ink on a mid-grey coat, 6.4:1, beats white at 3:1); if none does, try the next calmest area | Colour that matches the warmth and saturation of the picture, as Tetiana asked; only these 3 colours exist in the design system |
 | Colour stability | One colour per shot; when the colour changes between shots it changes on the cut, never mid-phrase | No flicker |
 | Stroke / shadow | None (design system: shadows only on one raised photo card and the pills) | Design system wins |
-| Last resort | If no slot passes 4.5:1, use plain text in the free slot with the best contrast. **Never put captions in a pill automatically** | Tetiana rejected pills on every caption (2026-10-05). A pill behind a caption only by hand, for one hard shot, if she asks |
+| Last resort | If no area passes 4.5:1, use plain text in the empty area with the best contrast. **Never put captions in a pill automatically** | Tetiana rejected pills on every caption (2026-10-05). A pill behind a caption only by hand, for one hard shot, if she asks |
 | When hidden | While a hook title, section title, beat word or CTA line is on screen, and during full-screen paper layouts that show the same words | The reference does this: one text voice at a time |
 
 ### 1.3 Keyword highlight
@@ -99,9 +100,9 @@ Load in Remotion with `@remotion/google-fonts/Onest` (weights 400, 500, 700) and
 | Rule | Value | Why |
 | --- | --- | --- |
 | Style | `display` (Onest 700, 118px) + optional `accent-line` (Playfair Italic 80px, straight) | The system's Headline |
-| Alignment | Left-aligned at x 68. Never centred | Design system: never centre the display |
-| Position | Top of first line at y 320. Accent line 14px below the display, left-aligned at the same x 68 | Inside every platform's safe zone and the 4:5 LinkedIn crop |
-| One title block | Display + accent line are one object: same left edge, built and removed together (Soft Focus Title / Title Out), always in the top title zone (y 320–700). The accent line is never centred, never moved right or down, never placed in a caption slot, and never treated as a caption by caption detection, slot picking or Chunk Swap | It must read as part of the title, not as a separate caption |
+| Alignment | Left edge at the 68px side margin (x 68). Never centred | Design system: never centre the display |
+| Position | No fixed height. The whole block (display + accent line) goes in the calmest empty area of the shot that fits it at x 68 (section 3.3); accent line 14px below the display, flush left at the same x 68. Keep it inside the 4:5 crop (y 285–1635) when possible | Text goes where the shot has room, inside the safe zones |
+| One title block | Display + accent line are one object: same left edge, built, placed and removed together (Soft Focus Title / Title Out). The accent line is never centred, never moved right or down, never placed in an area of its own, and never treated as a caption by caption detection, placement or Chunk Swap | It must read as part of the title, not as a separate caption |
 | Length | Display: max 2 lines, max 14 characters per line. Accent line: max 22 characters | Readable in under 1 s |
 | Build | Each line appears when she says it (line by line, not word by word), with Soft Focus Title (section 5) | Keeps the reference's build-up feeling without word-by-word switching |
 | Duration | On for 2.5–4.0 s, exit with Soft Focus Out | |
@@ -154,14 +155,16 @@ Not allowed: any other colour, coloured backgrounds, pink text, mint, neon, grad
 
 ### 3.2 Layouts
 
+Positions for text and graphics on footage in this table are examples of a good spot, not rules: on footage, section 3.3 decides each shot. Paper areas (L3's top half, the end card) keep their grid, since there is no footage to avoid there.
+
 | Code | Name | Composition | Use when |
 | --- | --- | --- | --- |
 | L1 | Full face | Footage fills 1080×1920; eyes at y 760 ± 60 | Default for talking-head speech |
-| L2 | Card over face | Footage full frame; one photo card (screenshot, result, photo: a plain rectangle, radius 0, no frame, straight, `shadow-lift`) centred, top edge at y 300, max 760×560; face stays visible below y 900 | She mentions something visual for 1.5–6 s: an app, a result, a before/after |
+| L2 | Card over face | Footage full frame; one photo card (screenshot, result, photo: a plain rectangle, radius 0, no frame, straight, `shadow-lift`), max 760×560, placed by section 3.3 (e.g. above her head when that area is empty); never over her face or hands | She mentions something visual for 1.5–6 s: an app, a result, a before/after |
 | L3 | Paper split | Top 0–1000: paper #F6F5F1, `meta` header row at y 260 (left: step index `[2]`, centre: `@tanii444.ka`), screen recording as a photo (radius 0, no shadow) at x 68–1012, y 320–980. Bottom 1000–1920: footage, cropped so her face centres at y 1300 | Tutorials: a screen recording or UI shown for more than 6 s |
-| L4 | Full screen + face card | Screen recording fills the frame (or sits on paper, x 68–1012); her face in a 300×370 photo card (radius 0, no frame, straight, `shadow-lift`) at x 700, y 1080 | Long screen walk-through where her face isn't needed but her voice is |
-| L5 | Beat moment | Footage in black and white (saturation 0), beat word centred at y 1180 | One punchline or "no" moment per reel, 600–1200 ms |
-| L6 | CTA over footage | Footage full frame; `meta` lead-in at y 300, `accent-line`-style keyword below it (section 11) | Last 3–4 s |
+| L4 | Full screen + face card | Screen recording fills the frame (or sits on paper, x 68–1012); her face in a 300×370 photo card (radius 0, no frame, straight, `shadow-lift`) in the calmest corner of the recording (e.g. lower right, outside the right unsafe band) | Long screen walk-through where her face isn't needed but her voice is |
+| L5 | Beat moment | Footage in black and white (saturation 0), beat word in the calmest empty area of the shot (e.g. lower middle), never on her face | One punchline or "no" moment per reel, 600–1200 ms |
+| L6 | CTA over footage | Footage full frame; `meta` lead-in with the `accent-line`-style keyword under it, as one block placed by section 3.3 (e.g. upper third when it is empty) (section 11) | Last 3–4 s |
 
 | Switch rule | Value | Why |
 | --- | --- | --- |
@@ -170,6 +173,22 @@ Not allowed: any other colour, coloured backgrounds, pink text, mint, neon, grad
 | Transition between layouts | Blur Dissolve, 320 ms (section 5) | |
 | Horizontal footage, talking head | Crop to 9:16 around her face (eyes at y 760); requires ≥ 1080px source height after crop, else use L3 | |
 | Horizontal footage, screen or scenery | Place as a photo on paper (L3) or as a photo card (L2). Never stretch, never blurred-copy background | Blurred-fill backgrounds look cheap |
+
+### 3.3 Text placement on footage
+
+There are no fixed positions for text or graphics on footage. For each shot, text goes where the picture has room.
+
+| Rule | Value | Why |
+| --- | --- | --- |
+| Where | The calmest empty area of the shot: never on her face or hands, never on busy detail (edge density over 8% of pixels with a Sobel filter, or visible movement), with room for the whole element's box | Text sits on empty space and never covers her |
+| How to choose | Analyse every frame of the shot (between two cuts). Mask her face and hands with a 40px margin plus the safe zones below, then pick the free area with the least detail and motion that fits the box for the whole shot | A spot that is empty in one frame can be covered a second later |
+| Stability | Chosen once per shot; it never moves mid-shot and may change only on a cut | Moving text looks nervous |
+| Several elements | Place the most important first (title or CTA, then a pop-up card, then a pill, then the caption), each in its own calm area, at least 40px apart, never overlapping. One text voice at a time still applies (section 1.2) | |
+| Alignment | The display title block always has its left edge at the 68px side margin (never centred); only its height changes. Other elements are centred in their area | Design system: display left-aligned |
+| Contrast | After choosing, the colour rule in section 1.2 must reach ≥ 4.5:1; if it can't, use the next calmest area | |
+| No room | If no area fits: shorten the text or leave out the non-essential graphic (pill, handle tag); never fall back to her face or hands | |
+| Safe zones | Always: no text in the top 250px, the bottom 480px, or right of x 920 from y 900 down (section 3.1) | The app's own buttons and captions cover those |
+| Paper layouts | Split screen (L3's paper half) and the end card keep their grid; there is no footage to avoid there | |
 
 ---
 
@@ -237,13 +256,13 @@ Named animations. CapCut equivalents are given only as the closest feel; the nam
 
 | Element | Spec | Position | Max |
 | --- | --- | --- | --- |
-| Hook / section title | Section 1.4 | x 68, y 320 | 1 at a time |
-| Section label | `section-label`, lowercase, e.g. "крок 2", "результат" | x 68, y 270 (on footage) or the field's left edge (on paper) | 1 |
-| Step index | BracketTag `[2]` in `meta` | L3 header left, y 260 | 1 |
-| Handle tag | `@tanii444.ka` in `meta`, #FFFFFF on footage / #111111 on paper | Centred, y 260. Shown 0.6–3.0 s in the hook and on L3 header | 1 |
-| Screenshot / UI card | Photo card: a plain rectangle, radius 0, no frame, no tape, never tilted, `shadow-lift` (0 22px 44px rgba(17,17,17,0.18)) | L2 position (section 3.2) | 1 on screen (2 only as a before/after pair, side by side with a 14px gap) |
-| Frosted pill | Section 6.4 | On footage only, centred x 540, y 1160 (above caption) or as caption last resort | 1 glass element per screen |
-| Status pill | Section 6.5 | Centred x 540, y 300 (top of the content area, above her head) | 1; counts as the glass element |
+| Hook / section title | Section 1.4 | Left edge x 68; height by section 3.3 | 1 at a time |
+| Section label | `section-label`, lowercase, e.g. "крок 2", "результат" | On footage: by section 3.3, left edge x 68, directly above what it names; on paper: the field's left edge | 1 |
+| Step index | BracketTag `[2]` in `meta` | L3 paper header, left (paper grid) | 1 |
+| Handle tag | `@tanii444.ka` in `meta`, #FFFFFF on footage / #111111 on paper | On footage: by section 3.3, in any calm area; on the L3 paper header: centred. Shown 0.6–3.0 s in the hook and on the L3 header | 1 |
+| Screenshot / UI card | Photo card: a plain rectangle, radius 0, no frame, no tape, never tilted, `shadow-lift` (0 22px 44px rgba(17,17,17,0.18)) | By section 3.3 (L2 in section 3.2 is an example) | 1 on screen (2 only as a before/after pair, side by side with a 14px gap) |
+| Frosted pill | Section 6.4 | On footage only, by section 3.3: its own calm area near what it describes, never touching the caption | 1 glass element per screen |
+| Status pill | Section 6.5 | By section 3.3: a calm area with room below or beside it for the result | 1; counts as the glass element |
 | Icons | Outline only: bookmark 24×30, arrow 104×22 (stroke 2.2–2.4px, round caps). Ink on paper, white on footage | In CTA and L3 header/footer | 2 |
 | Voice pill | Design system VoicePill | End card only (section 11) | 1 |
 | Glow | `glow-strong`, 540px | Behind end card CTA only | 1 |
@@ -279,10 +298,10 @@ The "work in progress" pill from the earlier test edit, which Tetiana liked, reb
 | Dot | `accent-pink` #F2A7C3, 0.32em, own glow, Status Pulse |
 | Text | `pill` style (Onest 500, 31px, #FFFFFF), lowercase except brand names, max 26 characters, then Thinking Dots. Examples: "Claude думає", "збирає дизайн", "шукає референси", "готово" |
 | Progress line (optional) | 3px line inside the pill, 0.95em from the left, 1.55em from the right, 10px above the bottom edge; track rgba(255,255,255,0.18), fill rgba(255,255,255,0.85), radius 999px. Fills with `ease-move` across the whole status sequence, never resets |
-| Position | Centred x 540, y 300 (top edge); its pop-up result lands below it at y 400–960 |
+| Position | No fixed spot: placed by section 3.3 in a calm empty area of the shot; its pop-up result lands in the next calm area beside or below it, never over her face or hands |
 | Sequence | 1) Pill Rise as she starts the action ("я питаю Claude…"). 2) 1–3 status texts, each on screen ≥ 1200 ms, changed with Status Swap. 3) Status Done ("готово" + check) for 600 ms. 4) Pill Rise reversed (180 ms), and 80 ms later the result pops up with Pop In (photo or UI card) |
 | Length | 1.8–4.5 s from Pill Rise to Done. If the real process took longer, speed up the screen recording (up to 8×) or cut it; never make the viewer wait over 4.5 s |
-| Max | 3 status sequences per reel, at least 8 s apart; never while a title, handle tag or CTA is on screen (they share the top area) |
+| Max | 3 status sequences per reel, at least 8 s apart; never while a title, handle tag or CTA is on screen (one text voice at a time) |
 | Sound | `switch-soft` on each Status Swap, `ding-soft` on Done, `pop-soft` on the result Pop In (section 7) |
 
 ---
@@ -381,8 +400,8 @@ Retention devices, all built from the motion and graphics in this file. Use at l
 | --- | --- |
 | Frame 0 | She is already mid-energy and speaking (cut any lead-in). Framing at 110% (tight), Full face. No black frames, no logo |
 | 0–150 ms | Nothing animates yet except the slow push |
-| 150 ms – 1.2 s | Hook title line 1 builds (Soft Focus Title), line 2 120 ms later, accent line last. Captions hidden while the title is on |
-| 0.6 – 3.0 s | Handle tag `@tanii444.ka` in `meta`, centred at y 260 |
+| 150 ms – 1.2 s | Hook title (placed by section 3.3, left edge x 68) line 1 builds (Soft Focus Title), line 2 120 ms later, accent line last. Captions hidden while the title is on |
+| 0.6 – 3.0 s | Handle tag `@tanii444.ka` in `meta`, placed by section 3.3 in a calm area away from the title |
 | ≈ 3.0 s | First cut-zoom to 100% on the first jump cut; Title Out; captions start |
 
 Hook title = the promise in max 2 short lines + an accent line. Tetiana talks about general topics, so these templates are formulas that work for any subject; fill in the brackets.
@@ -439,7 +458,7 @@ Rule for the spoken hook: the first sentence states the result, not the context.
 
 | Item | Value | Why |
 | --- | --- | --- |
-| Default CTA | Comment keyword, as in the reference: `meta` line "напиши в коментарях" (EN: "comment") at y 300, then the keyword in Playfair Display Italic 80px, straight, at y 350, centred, #FFFFFF | Comment CTAs drive reach; the reference's strongest graphic, made lowercase per the system |
+| Default CTA | Comment keyword, as in the reference: `meta` line "напиши в коментарях" (EN: "comment") with the keyword in Playfair Display Italic 80px directly under it, straight, the two lines centred on each other as one block, #FFFFFF. No fixed position: the block goes where the shot has room (section 3.3) | Comment CTAs drive reach; the reference's strongest graphic, made lowercase per the system |
 | CTA wording | Max 2 lines. Patterns: "напиши «промпт» в коментарях" · "збережи, щоб не загубити" · "comment «guide» and I'll send it" | Design system: CTA 1–2 lines, imperatives |
 | CTA timing | Appears with the first word of her spoken CTA, stays to the end; captions hidden meanwhile | |
 | End card (optional, tutorials and carousels-to-video) | 1.2 s paper card: design system FinalSlide in 1080×1920 (`.te-canvas--story`): voice pill + 2 body lines with 1 highlight word, strong glow behind, footer bookmark + "збережи". Enters with Blur Dissolve 320 ms | Reuses the CTABlock exactly |
@@ -458,7 +477,7 @@ Default: comment-keyword CTA with a seamless loop; the paper end card only when 
 | Skin | Never push saturation above 100%; no beauty filter, no skin smoothing | Natural and premium |
 | Mixed light | Match all clips in a reel to the first clip's white balance (±200 K) | One continuous look |
 | Sharpening | `unsharp=5:5:0.4` only when the source is 1080p and zoomed above 105% | |
-| Framing (vertical) | Eyes at y 760 ± 60, headroom above for titles; the face never crosses x 920 (right buttons) | Leaves y 320–700 for titles, as in the reference |
+| Framing (vertical) | Eyes at y 760 ± 60, headroom above for titles; the face never crosses x 920 (right buttons) | Leaves calm space around her for text |
 | Framing (horizontal) | See section 3.2 switch rules | |
 | Crop | Never crop above the hairline or through the chin; at 110% the eyes must still be at y 700–820 | |
 | Stabilisation | Only for handheld outdoor shots: `deshake` or `vidstab`, max 5% crop | |
@@ -474,7 +493,7 @@ Measured: one continuous talking-head setup, hard jump cuts with framing alterna
 
 | Copy | Exactly what | How it changes for us |
 | --- | --- | --- |
-| Small, quiet captions low in the frame | One line, white, medium-weight sans, ≈ 48px at y ≈ 1340, no box | **Slower:** 2–4 word chunks, min 800 ms instead of single words at 300 ms |
+| Small, quiet captions low in the frame | One line, white, medium-weight sans, ≈ 48px at y ≈ 1340, no box | **Slower:** 2–4 word chunks, min 800 ms instead of single words at 300 ms; and placed where each shot has room, not at a fixed height |
 | Captions soften into focus | Each word fades in over ~3 frames with a slight blur and scale-up | Same feel as Soft Focus In (140 ms), applied per chunk |
 | Mixed-font titles | Sans title lines with one word in a serif italic ("*Claude* може робити", "*закономірності*") | Onest 700 display + Playfair Italic accent line, left-aligned and straight (the reference centres them; our system forbids centred display and tilted text) |
 | Titles replace captions | When a title is on, captions disappear | Same rule (1.2) |
@@ -583,7 +602,7 @@ Work in `Claude/videos/<video>/`. Wait for Tetiana's go-ahead before touching th
 - [ ] Convert HDR to SDR, conform to 30 fps (section 12).
 - [ ] Whisper transcript with word-level timestamps (language set from the brief, never auto-detect), model from `Claude/video-tools/whisper-models`.
 - [ ] Fix spelling; keep English words in English spelling; lowercase (brand names excepted).
-- [ ] Chunk into 2–4 words, ≤ 24 chars, ≥ 800 ms (section 1.2). Mark keywords (section 1.3). Pick slot and colour per shot.
+- [ ] Chunk into 2–4 words, ≤ 24 chars, ≥ 800 ms (section 1.2). Mark keywords (section 1.3). Pick the caption position (section 3.3) and colour per shot.
 - [ ] Deliver `captions.json` + `captions.srt` and a readable list of chunks with times.
 
 ### Round 2: cut dead air
@@ -602,7 +621,7 @@ Work in `Claude/videos/<video>/`. Wait for Tetiana's go-ahead before touching th
 ### Round 4: full edit
 
 - [ ] Apply everything to the whole reel: photo cards, pills, status pills, beat moment, CTA, SFX, room tone (sections 3–11). No music.
-- [ ] QA: fonts loaded (no fallback), captions never under 800 ms, caption slot and colour fixed per shot with contrast ≥ 4.5:1, at least 4 interest triggers (8.1), max 1 glass + 1 glow on screen, nothing tilted, no text in unsafe bands, max 2 zooms / 10 s, visual change every 3–5 s, -14 LUFS / -1 dBTP, no black first frame, loop point checked.
+- [ ] QA: fonts loaded (no fallback), captions never under 800 ms, caption position and colour fixed per shot with contrast ≥ 4.5:1, no text on her face, hands or busy detail, at least 4 interest triggers (8.1), max 1 glass + 1 glow on screen, nothing tilted, no text in unsafe bands, max 2 zooms / 10 s, visual change every 3–5 s, -14 LUFS / -1 dBTP, no black first frame, loop point checked.
 - [ ] Export 1080×1920, 30 fps, H.264 High, 16–20 Mbps, AAC 48 kHz 320 kbps → `<video>_final.mp4`; plus a cover frame `<video>_cover.png` (1080×1920, hook title visible, key content inside the centre 1080×1440).
 
 ---
@@ -624,4 +643,5 @@ Work in `Claude/videos/<video>/`. Wait for Tetiana's go-ahead before touching th
 | 2026-10-06 | Synced with the design system: polaroids, white frames and tape removed (screenshots and face cards are plain photo cards with `shadow-lift`); heart icon removed; nothing is ever tilted, the accent line included |
 | 2026-10-06 | Design system added a dark Ink theme; reels may use it for paper layouts (L3, end card), one theme per reel, chosen in the brief |
 | 2026-10-06 | Accent line is left-aligned flush under the display as one title block (same x 68), never centred or placed like a caption |
+| 2026-10-06 | No fixed text positions on footage; text goes where the shot has room |
 | 2026-10-06 | This file now lives in the design system's Export group and is updated in the same change as the system |
