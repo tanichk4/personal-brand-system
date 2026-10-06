@@ -19,9 +19,9 @@ Two files to download and use anywhere, both kept current on every change to thi
 
 ### Mood
 
-Minimal fashion-editorial, like a Pinterest moodboard printed as a zine page. Off-white paper, black type, and real photos doing all the colour work. Calm, airy, a little playful, with one soft pink accent and a few soft 3D touches used as seasoning. It should never look like a tech dashboard.
+Minimal fashion-editorial, like a Pinterest moodboard printed as a zine page. Off-white paper, black type, and real photos doing all the colour work. Calm, airy, a little playful, with one soft pink accent and a few soft depth touches (frosted glass, one glow) used as seasoning. It should never look like a tech dashboard.
 
-Treat every value here as a spec, not a suggestion. The system works for any format: social posts, carousels, stories, covers, landing pages and presentations.
+Fonts, colours, shapes and the Don't list are fixed. Sizes and positions are the default for the 4:5 paper canvas; other formats and video adapt them to the space they have (see Video). The system works for any format: social posts, carousels, stories, covers, landing pages, presentations and reels.
 
 ### Content fundamentals
 
@@ -91,7 +91,35 @@ The base canvas is 1080×1350 (4:5). Every size scales proportionally with canva
 - Blur dissolve: on ONE photo, the bottom 45% gets a 16px backdrop blur and a faint paper tint (`paper-tint` → `paper-clear`), masked `linear-gradient(to top, #000 35%, transparent)` so the blur melts upward.
 - Glow: one large soft pink radial circle behind the single focal point. Use `--glow-soft` (about 85% of canvas width) behind a cover's focal photo, or `--glow-strong` (about 50%) behind the CTA. Never put a glow behind body text anywhere else.
 - Text and pills on a photo or on video have no fixed position: each goes where that picture has room, in the calmest empty area, never on a face, hands or busy detail. A display headline always keeps its left edge on the side margin; only its height changes. Paper areas keep their grid.
+- The picture is never changed to make room for text: never move, shrink or crop a photo or video for it, and never add a band, bar, strip, panel, paper area, gradient or box behind text. If text doesn't fit, make it smaller, use fewer words, move it, or leave it out.
 - **Restraint rule:** at most one glass/frosted/blur element and one glow per slide or page. Most slides get none. The 3D touches are seasoning, never the dish.
+
+### Motion
+
+All motion is short, soft and ease-out. No bounce, shake, spin, rotation or typewriter text. One thing moves at a time (stagger 120 ms if two must).
+
+| Token | Value | Use |
+| --- | --- | --- |
+| `ease-enter` | `cubic-bezier(0.22, 1, 0.36, 1)` | Anything appearing |
+| `ease-exit` | `cubic-bezier(0.4, 0, 1, 1)` | Anything leaving |
+| `ease-move` | `cubic-bezier(0.65, 0, 0.35, 1)` | Transitions, loops, slow pushes |
+| `dur-fast` | 140 ms | Small text in (captions, labels) |
+| `dur-base` | 220 ms | Titles in, exits |
+| `dur-slow` | 320 ms | Cards, layout changes, blur dissolve |
+
+- Text comes in with a soft focus: opacity 0→1, blur 8–12px→0, scale 0.92–0.96→1, a few px upward.
+- Pop-ups may settle with at most 2% overshoot; nothing else overshoots.
+- The reel stylebook names the full set of animations (Soft Focus, Pop In, Blur Dissolve and the rest) and builds them from these tokens.
+
+### Video
+
+For reels and stories (1080×1920). Full rules in `reel-stylebook.md`; these are the parts that belong to the system:
+
+- Text sits straight on the footage, with no band, panel, box, stroke or shadow behind it. Her footage stays framed as shot.
+- On footage, text is white #FFFFFF (or ink #111111 on bright areas); the reel stylebook also allows paper #F6F5F1 on warm shots.
+- The display headline on footage is 72–118px, the largest that fits the calm area; it keeps its left edge on the side margin. 118px on paper.
+- Keep text out of the platform zones: top 250px, bottom 480px, and right of x 920 from y 900 down.
+- Paper or Ink panels appear in video only to hold real content (a screen recording, an end card), never to make room for text.
 
 ### Components
 
@@ -113,6 +141,7 @@ Header, Footer, BracketTag, Headline, HighlightWord, SectionLabel, PhotoGrid, Fr
 - No glass, glow or blur on every slide, and never more than one of each per slide.
 - No drop shadows except on one raised photo and the pills.
 - No centred display headlines or accent lines, and no dense text blocks.
+- No bands, panels or paper strips added behind text on a photo or video, and never move or shrink a photo to make room for text.
 - No heavy 3D renders.
 
 ## 2. Tokens
@@ -310,7 +339,7 @@ Two rows of photos with deliberately uneven columns and rows, sharp corners, 14p
 
 A frosted glass pill that sits on a photo and states one key fact in 2–4 words.
 
-- Markup: `<span class="te-frost"><span class="te-dot"></span>6 категорій поз</span>`, placed as a child of a `.te-photo`. It has no fixed spot: put it where that photo has room, in the calmest empty area, never on a face, hands or busy detail. Move it with `--pill-x` (horizontal centre) and `--pill-y` (distance from the bottom); with neither set it sits bottom-centre.
+- Markup: `<span class="te-frost"><span class="te-dot"></span>6 категорій поз</span>`, placed as a child of a `.te-photo`. It has no fixed spot: put it where that photo has room, in the calmest empty area, never on a face, hands or busy detail. Always set its spot with `--pill-x` (horizontal centre) and `--pill-y` (distance from the bottom); the bottom-centre the CSS falls back to is only a placeholder for previews, not a position to use.
 - Fill: smoky glass-dark (`glass-dark-top` → `glass-dark-bottom`), see-through, over a soft backdrop blur `blur-glass` (24px) + saturate 120%. Fully rounded (`radius-pill`), `shadow-pill`.
 - Rim: a thin 1px gradient line, brightest at the top-left and bottom-right (`glass-border`), dimmer along the long sides (`glass-border-faint`). Inner edges: `glass-highlight` on top, `glass-lowlight` at the bottom.
 - Proportions, all in em of the text so they hold at any size: height about 2.8em, padding 0.9em 1.55em 0.9em 0.95em, dot 0.32em, gap from dot to text 0.72em.
