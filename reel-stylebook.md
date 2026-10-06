@@ -1,6 +1,6 @@
 # Reel Stylebook: @tanii444.ka
 
-Version 0.9 (2026-10-06: audit fixes. Her footage is never moved or covered to make room for text, and no band, panel or box ever goes behind text (section 3.3); hook title optional and sized to the shot; split screen only for real screen recordings; one-go edit, no colour matching, no ElevenLabs; pacing counts softened. The design system is now colours, type and four signature elements (frosted glass pill, glow, blur dissolve, handle tag); the carousel kit, voice pill, end card, icons, face card and card shadows are gone, and screenshots are shown plain). Version 0.8 (2026-10-06: no fixed text positions on footage; text goes where each shot has room, section 3.3). Version 0.7 (2026-10-06: the accent line is left-aligned flush under the display as one title block, never centred or placed like a caption). Version 0.6 (2026-10-06: the design system gained a dark Ink theme; paper layouts can use it, one theme per reel). Version 0.5 (2026-10-06: synced with the current Tanichka Editorial design system: no polaroids, frames or tape (screenshots are plain photo cards), no heart icon, no tilted text). Version 0.4 (2026-10-05: text sizes +20%, no automatic caption pills, no colour grade, after Tetiana's review of IMG_6777). Built from the **Tanichka Editorial** design system, Tetiana's video editing rules, and a frame-by-frame study of her reference reel.
+Version 0.9 (2026-10-06: audit fixes. Her footage is never moved or covered to make room for text, and no band, panel or box ever goes behind text (section 3.3); hook title optional and sized to the shot; split screen only for real screen recordings; one-go edit, no colour matching, no ElevenLabs; pacing counts softened; soft text glow on accent text. The design system is now colours, type and four signature elements (frosted glass pill, glow, blur dissolve, handle tag); the carousel kit, voice pill, end card, icons, face card and card shadows are gone, and screenshots are shown plain). Version 0.8 (2026-10-06: no fixed text positions on footage; text goes where each shot has room, section 3.3). Version 0.7 (2026-10-06: the accent line is left-aligned flush under the display as one title block, never centred or placed like a caption). Version 0.6 (2026-10-06: the design system gained a dark Ink theme; paper layouts can use it, one theme per reel). Version 0.5 (2026-10-06: synced with the current Tanichka Editorial design system: no polaroids, frames or tape (screenshots are plain photo cards), no heart icon, no tilted text). Version 0.4 (2026-10-05: text sizes +20%, no automatic caption pills, no colour grade, after Tetiana's review of IMG_6777). Built from the **Tanichka Editorial** design system, Tetiana's video editing rules, and a frame-by-frame study of her reference reel.
 
 **Where this file lives:** written inside the Tanichka Editorial design system (Export group, `assets/Export/reel-stylebook.md`) and published to the GitHub repo `tanichk4/personal-brand-system`. Change it in the design system first, then export, or the next export overwrites the change. Whenever the design system changes, this file is updated in the same change so the two never disagree.
 
@@ -15,7 +15,7 @@ Version 0.9 (2026-10-06: audit fixes. Her footage is never moved or covered to m
 ### Hard rules (always true)
 
 1. **Her footage is never moved, shrunk, cropped or covered to make room for text or graphics.** Her framing stays as she shot it; zooms are centred on her face.
-2. **Never add a band, bar, strip, panel, paper area, gradient, scrim or box behind or around text on footage.** Text sits straight on the picture, or it isn't shown.
+2. **Never add a band, bar, strip, panel, paper area, scrim or box behind or around text on footage.** Text sits straight on the picture, or it isn't shown. (The soft text glow and the pink glow are not bands: they are allowed, section 2.)
 3. If text doesn't fit, in this order: make it smaller (down to the minimum sizes in section 1.1), use fewer words or drop the accent line, put it in another calm area (the lower part of the frame included), or leave it out. Captions alone are a finished reel; a title can live on the cover instead.
 4. Never on her face or hands. Never in the platform safe zones (section 3.1).
 5. Onest and Playfair Display Italic only. Only the colours in section 2. Nothing tilted. No polaroids, frames, tape, hearts, emoji.
@@ -94,7 +94,7 @@ Load in Remotion with `@remotion/google-fonts/Onest` (weights 400, 500, 700) and
 | Filler words | Never captioned (they're cut anyway, section 8) | |
 | Colour | Measured once per shot on the chosen area's box (mean of the frames): **ink #111111** if mean luminance > 62%; otherwise **porcelain #F6F5F1** if the picture is warm (mean Lab b* > +6, e.g. lamp light, skin, wood, beige) and **white #FFFFFF** if it is neutral or cool (b* ≤ +6, e.g. grey coat, daylight, screens, black and white). The chosen colour must reach a contrast of ≥ 4.5:1 against the box; if it doesn't, use whichever of the three colours does (e.g. ink on a mid-grey coat, 6.4:1, beats white at 3:1); if none does, try the next calmest area | Colour that matches the warmth and saturation of the picture, as Tetiana asked; only these 3 colours exist in the design system |
 | Colour stability | One colour per shot; when the colour changes between shots it changes on the cut, never mid-phrase | No flicker |
-| Stroke / shadow | None (the only shadow in a reel is under a pill) | Text sits straight on the picture |
+| Stroke / glow | No stroke, no hard drop shadow. Regular captions stay plain; the caption keyword gets the soft text glow (section 2) | The glow stays special when only accents have it |
 | Last resort | If no area passes 4.5:1, use plain text in the empty area with the best contrast. **Never put captions in a pill automatically** | Tetiana rejected pills on every caption (2026-10-05). A pill behind a caption only by hand, for one hard shot, if she asks |
 | When hidden | While a hook title, section title, beat word or CTA line is on screen, and during full-screen paper layouts that show the same words | The reference does this: one text voice at a time |
 
@@ -102,7 +102,7 @@ Load in Remotion with `@remotion/google-fonts/Onest` (weights 400, 500, 700) and
 
 | Rule | Value | Why |
 | --- | --- | --- |
-| Style | Playfair Display Italic 400, 115% of the caption (67px), same colour. Never pink, never underlined, never a box | Design system `highlight` |
+| Style | Playfair Display Italic 400, 115% of the caption (67px), same colour, with the soft text glow (section 2). Never pink, never underlined, never a box | Design system `highlight` |
 | How many | Max 1 per chunk and max 1 every 6 s (so about 5–9 per 45 s reel) | Keeps it a seasoning |
 | Which word | In this order: 1) the result or number ("за 5 хвилин", "x2"), 2) the tool or thing being named (Claude, Figma), 3) the contrast word in a "not X but Y" line, 4) the emotional word that carries the point ("красиво", "легко") | Highlights the word you'd stress when speaking |
 | Never | Function words (і, в, на, the, a, to), the first word of the reel, two keywords in a row | |
@@ -111,7 +111,7 @@ Load in Remotion with `@remotion/google-fonts/Onest` (weights 400, 500, 700) and
 
 | Rule | Value | Why |
 | --- | --- | --- |
-| Style | `display` (Onest 700, 118px) + optional `accent-line` (Playfair Italic 80px, straight) | The system's Headline |
+| Style | `display` (Onest 700, 118px) + optional `accent-line` (Playfair Italic 80px, straight), both with the soft text glow (section 2) | The system's Headline |
 | Alignment | Left edge at the 68px side margin (x 68). Never centred | Design system: never centre the display |
 | When | Optional. Use it when a shot has a calm area big enough for it; otherwise skip it (the hook can be spoken, with captions) or put the title on the cover | A title must never force a band or a reframe |
 | Position | No fixed height. The whole block (display + accent line) goes in the calmest empty area of the shot that fits it at x 68 (section 3.3), upper or lower part of the frame; accent line 14px below the display, flush left at the same x 68. Keep it inside the 4:5 crop (y 285–1635) when possible | Text goes where the shot has room, inside the safe zones |
@@ -144,10 +144,11 @@ Every value comes from the design system tokens.
 | Dot in pills, waveform bars | #F2A7C3 | `accent-pink` | The one accent; never text, never a fill |
 | Frosted pill fill | linear 180°: rgba(34,34,36,0.52) → rgba(14,14,16,0.60) | `glass-dark-*` | Smoky see-through glass |
 | Frosted pill rim | 1px, rgba(255,255,255,0.30) at corners → rgba(255,255,255,0.10) on long sides | `glass-border*` | |
-| Glow | radial, #F2A7C3B3 → transparent at 68%, about 540px wide | `glow-strong` | One soft pink glow behind the focal point |
+| Glow | radial, #F2A7C3B3 → transparent at 68%, about 540px wide | `glow-strong` | One soft pink glow behind the focal point; it may sit behind a title or the CTA |
+| Text glow | white text: `text-shadow: 0 0 6px rgba(255,255,255,0.35), 0 0 18px rgba(255,255,255,0.18), 0 0 40px rgba(242,167,195,0.14)`; ink text on paper: `0 0 24px rgba(242,167,195,0.22)` | `text-glow` | A light bloom with a hint of pink halation, so accent text feels softly lit, a little wet, never flat. On accent text only: display title, accent line, caption keyword, pill text, beat word, CTA keyword. Never on every word or on regular captions |
 | Section / layout dissolve tint | rgba(246,245,241,0.30) → 0 | `paper-tint` → `paper-clear` | The blur dissolve's tint |
 
-Not allowed: any other colour, coloured backgrounds, pink text, mint, neon, any gradient other than the pill fill, the glow and the dissolve tint above.
+Not allowed: any other colour, coloured backgrounds, pink text, mint, neon, any gradient other than the pill fill, the glow, the text glow and the dissolve tint above.
 
 ---
 
@@ -304,7 +305,7 @@ The "work in progress" pill from the earlier test edit, which Tetiana liked, bui
 | --- | --- |
 | Shell | Frosted pill (6.4): same fill, blur, rim and shadow, fully rounded, height 2.8em at 31px text (≈ 87px) |
 | Dot | `accent-pink` #F2A7C3, 0.32em, own glow, Status Pulse |
-| Text | `pill` style (Onest 500, 31px, #FFFFFF), lowercase except brand names, max 26 characters, then Thinking Dots. Examples: "Claude думає", "збирає дизайн", "шукає референси", "готово" |
+| Text | `pill` style (Onest 500, 31px, #FFFFFF, soft text glow), lowercase except brand names, max 26 characters, then Thinking Dots. Examples: "Claude думає", "збирає дизайн", "шукає референси", "готово" |
 | Progress line (optional) | 3px line inside the pill, 0.95em from the left, 1.55em from the right, 10px above the bottom edge; track rgba(255,255,255,0.18), fill rgba(255,255,255,0.85), radius 999px. Fills with `ease-move` across the whole status sequence, never resets |
 | Position | No fixed spot: placed by section 3.3 in a calm empty area of the shot; its pop-up result lands in the next calm area beside or below it, never over her face or hands |
 | Sequence | 1) Pill Rise as she starts the action ("я питаю Claude…"). 2) 1–3 status texts, each on screen ≥ 1200 ms, changed with Status Swap. 3) Status Done ("готово" + check) for 600 ms. 4) Pill Rise reversed (180 ms), and 80 ms later the result pops up with Pop In (a plain screenshot) |
@@ -550,7 +551,7 @@ When sending a reference, a 3–10 s screen recording plus one line ("I like how
 | lowercase captions and titles | ALL CAPS, underlines, emoji |
 | 2–4 word caption chunks, ≥ 800 ms | Word-by-word, karaoke colour fills, bouncing words |
 | One keyword in Playfair Italic, same colour | Pink, yellow or boxed keywords |
-| Captions on empty space, in white, porcelain or ink matched to the shot | Text strokes, drop shadows, boxes, bands or paper strips behind text, captions on her face |
+| Captions on empty space, in white, porcelain or ink matched to the shot; a soft text glow on titles, keywords and pill text | Text strokes, hard drop shadows, a glow on every word, boxes, bands or paper strips behind text, captions on her face |
 | Footage framed as she shot it; text adapts to the shot | Moving, shrinking or reframing her to fit text; paper split without a screen recording |
 | Everything straight: titles, accent lines, cards | Tilted or rotated text or cards |
 | Cut-zoom on jump cuts, 100% ↔ 110% | Whip zooms, shakes, spins, glitch, RGB split, flash frames |
@@ -653,5 +654,6 @@ Work in `Claude/videos/<video>/`. **One go by default:** run every round below w
 | 2026-10-06 | Accent line is left-aligned flush under the display as one title block (same x 68), never centred or placed like a caption |
 | 2026-10-06 | No fixed text positions on footage; text goes where the shot has room |
 | 2026-10-06 | This file now lives in the design system's Export group and is updated in the same change as the system |
+| 2026-10-06 | Soft text glow added (light bloom + faint pink halation) on accent text only: titles, accent line, caption keyword, pill text, beat word, CTA keyword. Removed the old rules "no shadow on captions" and "no glow behind text" (Tetiana didn't set them) |
 | 2026-10-06 | Design system cut to colours, type and four signature elements Tetiana keeps as her branding: frosted glass pill, glow, blur dissolve, handle tag. Removed: the carousel kit (header and footer rows, bracket tags, icons, photo grid, slide templates), the voice-message pill with its waveform, the end card, the face card (L4) and card shadows; screenshots are shown plain |
 | 2026-10-06 | Audit fixes (v0.9): Hard rules added at the top; her footage is never moved or covered and no band, panel or box goes behind text; hook title optional, display 72–118px on footage; L3 only for real screen recordings and never a fallback; framing as shot; one-go edit; no white-balance matching; no ElevenLabs; visual-change and trigger counts became guidance; her own decisions come first in precedence |
